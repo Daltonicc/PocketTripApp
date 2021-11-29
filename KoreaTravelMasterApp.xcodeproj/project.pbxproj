@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A6F158E274F6FE20076E4FC /* MytravelSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F158D274F6FE20076E4FC /* MytravelSpotViewController.swift */; };
+		6A6F1591274FBD3F0076E4FC /* MytravelSpotViewController+TabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F1590274FBD3F0076E4FC /* MytravelSpotViewController+TabelView.swift */; };
+		6A6F1593274FBE180076E4FC /* MytravelSpotTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F1592274FBE180076E4FC /* MytravelSpotTabelViewCell.swift */; };
+		6A6F159527512F6D0076E4FC /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F159427512F6D0076E4FC /* CustomAnnotation.swift */; };
+		6A6F159727514B860076E4FC /* TravelSpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F159627514B860076E4FC /* TravelSpotDetailViewController.swift */; };
+		6A6F1599275164F60076E4FC /* AllTravelSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F1598275164F60076E4FC /* AllTravelSpotViewController.swift */; };
+		6A6F159C2752440E0076E4FC /* AllTravelSpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F159B2752440E0076E4FC /* AllTravelSpotTableViewCell.swift */; };
+		6A6F159F275244580076E4FC /* AllTravelSpotViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F159E275244580076E4FC /* AllTravelSpotViewController+TableView.swift */; };
+		6A6F15A1275252190076E4FC /* GyeongGiDoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6F15A0275252190076E4FC /* GyeongGiDoData.swift */; };
+		6A950BA22742C56B00DDAE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BA12742C56B00DDAE25 /* AppDelegate.swift */; };
+		6A950BA42742C56B00DDAE25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BA32742C56B00DDAE25 /* SceneDelegate.swift */; };
+		6A950BA92742C56B00DDAE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A950BA72742C56B00DDAE25 /* Main.storyboard */; };
+		6A950BAB2742C56C00DDAE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A950BAA2742C56C00DDAE25 /* Assets.xcassets */; };
+		6A950BAE2742C56C00DDAE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A950BAC2742C56C00DDAE25 /* LaunchScreen.storyboard */; };
+		6A950BBB2746AD1500DDAE25 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BBA2746AD1500DDAE25 /* MainViewController.swift */; };
+		6A950BBD2746B17300DDAE25 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BBC2746B17300DDAE25 /* AwardsViewController.swift */; };
+		6A950BC02748CECD00DDAE25 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BBE2748CECD00DDAE25 /* MainCollectionViewCell.swift */; };
+		6A950BC12748CECD00DDAE25 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A950BBF2748CECD00DDAE25 /* MainCollectionViewCell.xib */; };
+		6A950BC4274A5D6400DDAE25 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BC3274A5D6400DDAE25 /* SideMenu */; };
+		6A950BCB274A6A0E00DDAE25 /* TravelMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */; };
+		6A950BCE274A765C00DDAE25 /* SeoulData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCD274A765C00DDAE25 /* SeoulData.swift */; };
+		6A950BD0274BA7A100DDAE25 /* TravelDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCF274BA7A100DDAE25 /* TravelDataStruct.swift */; };
+		6A950BD5274BC30600DDAE25 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BD4274BC30600DDAE25 /* APIManager.swift */; };
+		6A950BD8274BC33C00DDAE25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BD7274BC33C00DDAE25 /* Alamofire */; };
+		6A950BDB274BC35F00DDAE25 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BDA274BC35F00DDAE25 /* SwiftyJSON */; };
+		6A950BDE274BC37D00DDAE25 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BDD274BC37D00DDAE25 /* Kingfisher */; };
+		6A950BE0274CBD6300DDAE25 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BDF274CBD6300DDAE25 /* WelcomeViewController.swift */; };
+		6A950BE6274D324800DDAE25 /* TravelMapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BE5274D324800DDAE25 /* TravelMapViewController+Extension.swift */; };
+		6A950BE8274D527800DDAE25 /* TravelMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BE7274D527800DDAE25 /* TravelMapViewController+MapView.swift */; };
+		6A950BEB274E13D200DDAE25 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BEA274E13D200DDAE25 /* RealmModel.swift */; };
+		6A950BEE274E144200DDAE25 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BED274E144200DDAE25 /* Realm */; };
+		6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BEF274E144200DDAE25 /* RealmSwift */; };
+		6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */; };
+		6AC0C4122754177100D876BD /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C4112754177100D876BD /* Zip */; };
+		6AC0C4152754FBA500D876BD /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */; };
+		6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */; };
+		6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */; };
+		6AC0C41C27550A3D00D876BD /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */; };
+		6AC0C4202755454200D876BD /* MyRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C41F2755454200D876BD /* MyRegion.swift */; };
+		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A6F158D274F6FE20076E4FC /* MytravelSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytravelSpotViewController.swift; sourceTree = "<group>"; };
+		6A6F1590274FBD3F0076E4FC /* MytravelSpotViewController+TabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MytravelSpotViewController+TabelView.swift"; sourceTree = "<group>"; };
+		6A6F1592274FBE180076E4FC /* MytravelSpotTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytravelSpotTabelViewCell.swift; sourceTree = "<group>"; };
+		6A6F159427512F6D0076E4FC /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		6A6F159627514B860076E4FC /* TravelSpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSpotDetailViewController.swift; sourceTree = "<group>"; };
+		6A6F1598275164F60076E4FC /* AllTravelSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTravelSpotViewController.swift; sourceTree = "<group>"; };
+		6A6F159B2752440E0076E4FC /* AllTravelSpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTravelSpotTableViewCell.swift; sourceTree = "<group>"; };
+		6A6F159E275244580076E4FC /* AllTravelSpotViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllTravelSpotViewController+TableView.swift"; sourceTree = "<group>"; };
+		6A6F15A0275252190076E4FC /* GyeongGiDoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyeongGiDoData.swift; sourceTree = "<group>"; };
+		6A950B9E2742C56B00DDAE25 /* KoreaTravelMasterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaTravelMasterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A950BA12742C56B00DDAE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A950BA32742C56B00DDAE25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A950BA82742C56B00DDAE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A950BAA2742C56C00DDAE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A950BAD2742C56C00DDAE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A950BAF2742C56C00DDAE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A950BBA2746AD1500DDAE25 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6A950BBC2746B17300DDAE25 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
+		6A950BBE2748CECD00DDAE25 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A950BBF2748CECD00DDAE25 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMapViewController.swift; sourceTree = "<group>"; };
+		6A950BCD274A765C00DDAE25 /* SeoulData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulData.swift; sourceTree = "<group>"; };
+		6A950BCF274BA7A100DDAE25 /* TravelDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDataStruct.swift; sourceTree = "<group>"; };
+		6A950BD4274BC30600DDAE25 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6A950BDF274CBD6300DDAE25 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6A950BE5274D324800DDAE25 /* TravelMapViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMapViewController+Extension.swift"; sourceTree = "<group>"; };
+		6A950BE7274D527800DDAE25 /* TravelMapViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMapViewController+MapView.swift"; sourceTree = "<group>"; };
+		6A950BEA274E13D200DDAE25 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
+		6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
+		6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
+		6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
+		6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
+		6AC0C41F2755454200D876BD /* MyRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRegion.swift; sourceTree = "<group>"; };
+		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A950B9B2742C56B00DDAE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC0C4122754177100D876BD /* Zip in Frameworks */,
+				6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */,
+				6A950BDE274BC37D00DDAE25 /* Kingfisher in Frameworks */,
+				6A950BDB274BC35F00DDAE25 /* SwiftyJSON in Frameworks */,
+				6A950BC4274A5D6400DDAE25 /* SideMenu in Frameworks */,
+				6A950BD8274BC33C00DDAE25 /* Alamofire in Frameworks */,
+				6A950BEE274E144200DDAE25 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A6F158F274F70FE0076E4FC /* MytravelSpot */ = {
+			isa = PBXGroup;
+			children = (
+				6A6F158D274F6FE20076E4FC /* MytravelSpotViewController.swift */,
+				6A6F1590274FBD3F0076E4FC /* MytravelSpotViewController+TabelView.swift */,
+			);
+			path = MytravelSpot;
+			sourceTree = "<group>";
+		};
+		6A6F159A27517C9D0076E4FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A6F159B2752440E0076E4FC /* AllTravelSpotTableViewCell.swift */,
+				6A6F1592274FBE180076E4FC /* MytravelSpotTabelViewCell.swift */,
+				6A950BBE2748CECD00DDAE25 /* MainCollectionViewCell.swift */,
+				6A950BBF2748CECD00DDAE25 /* MainCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6A6F159D275244380076E4FC /* AllTravelSpot */ = {
+			isa = PBXGroup;
+			children = (
+				6A6F1598275164F60076E4FC /* AllTravelSpotViewController.swift */,
+				6A6F159E275244580076E4FC /* AllTravelSpotViewController+TableView.swift */,
+			);
+			path = AllTravelSpot;
+			sourceTree = "<group>";
+		};
+		6A950B952742C56B00DDAE25 = {
+			isa = PBXGroup;
+			children = (
+				6A950BA02742C56B00DDAE25 /* KoreaTravelMasterApp */,
+				6A950B9F2742C56B00DDAE25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A950B9F2742C56B00DDAE25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A950B9E2742C56B00DDAE25 /* KoreaTravelMasterApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A950BA02742C56B00DDAE25 /* KoreaTravelMasterApp */ = {
+			isa = PBXGroup;
+			children = (
+				6AC0C41627550A2600D876BD /* Font */,
+				6AFD4AB32752C4F600B971B0 /* Models */,
+				6AFD4AB22752C49D00B971B0 /* VC */,
+				6A6F159A27517C9D0076E4FC /* Views */,
+				6A950BA12742C56B00DDAE25 /* AppDelegate.swift */,
+				6A950BA32742C56B00DDAE25 /* SceneDelegate.swift */,
+				6A950BA72742C56B00DDAE25 /* Main.storyboard */,
+				6A950BAC2742C56C00DDAE25 /* LaunchScreen.storyboard */,
+				6A950BAA2742C56C00DDAE25 /* Assets.xcassets */,
+				6A950BAF2742C56C00DDAE25 /* Info.plist */,
+			);
+			path = KoreaTravelMasterApp;
+			sourceTree = "<group>";
+		};
+		6A950BCC274A762700DDAE25 /* TravelSpotData */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BCF274BA7A100DDAE25 /* TravelDataStruct.swift */,
+				6A950BCD274A765C00DDAE25 /* SeoulData.swift */,
+				6A6F15A0275252190076E4FC /* GyeongGiDoData.swift */,
+			);
+			path = TravelSpotData;
+			sourceTree = "<group>";
+		};
+		6A950BD3274BC2E700DDAE25 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BD4274BC30600DDAE25 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		6A950BE2274D31E800DDAE25 /* TravelMap */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */,
+				6A950BE5274D324800DDAE25 /* TravelMapViewController+Extension.swift */,
+				6A950BE7274D527800DDAE25 /* TravelMapViewController+MapView.swift */,
+				6A6F159427512F6D0076E4FC /* CustomAnnotation.swift */,
+			);
+			path = TravelMap;
+			sourceTree = "<group>";
+		};
+		6A950BE9274E13C400DDAE25 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BEA274E13D200DDAE25 /* RealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		6A950BF1274E2F4900DDAE25 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		6AC0C4132754FB8700D876BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BBA2746AD1500DDAE25 /* MainViewController.swift */,
+				6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6AC0C41627550A2600D876BD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */,
+				6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */,
+				6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		6AFD4AB22752C49D00B971B0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				6AC0C4132754FB8700D876BD /* Main */,
+				6A950BBC2746B17300DDAE25 /* AwardsViewController.swift */,
+				6A950BDF274CBD6300DDAE25 /* WelcomeViewController.swift */,
+				6A6F159627514B860076E4FC /* TravelSpotDetailViewController.swift */,
+				6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */,
+				6A950BE2274D31E800DDAE25 /* TravelMap */,
+				6A6F158F274F70FE0076E4FC /* MytravelSpot */,
+				6A6F159D275244380076E4FC /* AllTravelSpot */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		6AFD4AB32752C4F600B971B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A950BF1274E2F4900DDAE25 /* Toast */,
+				6A950BE9274E13C400DDAE25 /* Realm */,
+				6A950BD3274BC2E700DDAE25 /* APIManager */,
+				6A950BCC274A762700DDAE25 /* TravelSpotData */,
+				6AC0C41F2755454200D876BD /* MyRegion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A950B9D2742C56B00DDAE25 /* KoreaTravelMasterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A950BB22742C56C00DDAE25 /* Build configuration list for PBXNativeTarget "KoreaTravelMasterApp" */;
+			buildPhases = (
+				6A950B9A2742C56B00DDAE25 /* Sources */,
+				6A950B9B2742C56B00DDAE25 /* Frameworks */,
+				6A950B9C2742C56B00DDAE25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoreaTravelMasterApp;
+			packageProductDependencies = (
+				6A950BC3274A5D6400DDAE25 /* SideMenu */,
+				6A950BD7274BC33C00DDAE25 /* Alamofire */,
+				6A950BDA274BC35F00DDAE25 /* SwiftyJSON */,
+				6A950BDD274BC37D00DDAE25 /* Kingfisher */,
+				6A950BED274E144200DDAE25 /* Realm */,
+				6A950BEF274E144200DDAE25 /* RealmSwift */,
+				6AC0C4112754177100D876BD /* Zip */,
+			);
+			productName = KoreaTravelMasterApp;
+			productReference = 6A950B9E2742C56B00DDAE25 /* KoreaTravelMasterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A950B962742C56B00DDAE25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					6A950B9D2742C56B00DDAE25 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 6A950B992742C56B00DDAE25 /* Build configuration list for PBXProject "KoreaTravelMasterApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A950B952742C56B00DDAE25;
+			packageReferences = (
+				6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */,
+				6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6A950BD9274BC35F00DDAE25 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6A950BDC274BC37D00DDAE25 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */,
+			);
+			productRefGroup = 6A950B9F2742C56B00DDAE25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A950B9D2742C56B00DDAE25 /* KoreaTravelMasterApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A950B9C2742C56B00DDAE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A950BAE2742C56C00DDAE25 /* LaunchScreen.storyboard in Resources */,
+				6A950BAB2742C56C00DDAE25 /* Assets.xcassets in Resources */,
+				6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */,
+				6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */,
+				6A950BA92742C56B00DDAE25 /* Main.storyboard in Resources */,
+				6AC0C41C27550A3D00D876BD /* SB 어그로OTF L.otf in Resources */,
+				6A950BC12748CECD00DDAE25 /* MainCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A950B9A2742C56B00DDAE25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6F159F275244580076E4FC /* AllTravelSpotViewController+TableView.swift in Sources */,
+				6A950BD5274BC30600DDAE25 /* APIManager.swift in Sources */,
+				6A950BD0274BA7A100DDAE25 /* TravelDataStruct.swift in Sources */,
+				6A6F15A1275252190076E4FC /* GyeongGiDoData.swift in Sources */,
+				6A950BBB2746AD1500DDAE25 /* MainViewController.swift in Sources */,
+				6A950BA22742C56B00DDAE25 /* AppDelegate.swift in Sources */,
+				6A6F158E274F6FE20076E4FC /* MytravelSpotViewController.swift in Sources */,
+				6A950BE6274D324800DDAE25 /* TravelMapViewController+Extension.swift in Sources */,
+				6A6F1599275164F60076E4FC /* AllTravelSpotViewController.swift in Sources */,
+				6A6F159727514B860076E4FC /* TravelSpotDetailViewController.swift in Sources */,
+				6A6F1591274FBD3F0076E4FC /* MytravelSpotViewController+TabelView.swift in Sources */,
+				6A6F159527512F6D0076E4FC /* CustomAnnotation.swift in Sources */,
+				6A950BC02748CECD00DDAE25 /* MainCollectionViewCell.swift in Sources */,
+				6A950BCB274A6A0E00DDAE25 /* TravelMapViewController.swift in Sources */,
+				6A950BBD2746B17300DDAE25 /* AwardsViewController.swift in Sources */,
+				6A950BE0274CBD6300DDAE25 /* WelcomeViewController.swift in Sources */,
+				6A950BCE274A765C00DDAE25 /* SeoulData.swift in Sources */,
+				6A950BA42742C56B00DDAE25 /* SceneDelegate.swift in Sources */,
+				6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */,
+				6AC0C4202755454200D876BD /* MyRegion.swift in Sources */,
+				6A6F159C2752440E0076E4FC /* AllTravelSpotTableViewCell.swift in Sources */,
+				6A6F1593274FBE180076E4FC /* MytravelSpotTabelViewCell.swift in Sources */,
+				6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */,
+				6A950BEB274E13D200DDAE25 /* RealmModel.swift in Sources */,
+				6AC0C4152754FBA500D876BD /* MainViewController+Extension.swift in Sources */,
+				6A950BE8274D527800DDAE25 /* TravelMapViewController+MapView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A950BA72742C56B00DDAE25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A950BA82742C56B00DDAE25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6A950BAC2742C56C00DDAE25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A950BAD2742C56C00DDAE25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A950BB02742C56C00DDAE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A950BB12742C56C00DDAE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A950BB32742C56C00DDAE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PY3HK5UPTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "포켓트립";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 알기 위해 이 권한이 필요합니다!!!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6A950BB42742C56C00DDAE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PY3HK5UPTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "포켓트립";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 알기 위해 이 권한이 필요합니다!!!";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A950B992742C56B00DDAE25 /* Build configuration list for PBXProject "KoreaTravelMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A950BB02742C56C00DDAE25 /* Debug */,
+				6A950BB12742C56C00DDAE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A950BB22742C56C00DDAE25 /* Build configuration list for PBXNativeTarget "KoreaTravelMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A950BB32742C56C00DDAE25 /* Debug */,
+				6A950BB42742C56C00DDAE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6A950BD9274BC35F00DDAE25 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		6A950BDC274BC37D00DDAE25 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.19.0;
+			};
+		};
+		6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A950BC3274A5D6400DDAE25 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+		6A950BD7274BC33C00DDAE25 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6A950BDA274BC35F00DDAE25 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BD9274BC35F00DDAE25 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		6A950BDD274BC37D00DDAE25 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BDC274BC37D00DDAE25 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		6A950BED274E144200DDAE25 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		6A950BEF274E144200DDAE25 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		6AC0C4112754177100D876BD /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6A950B962742C56B00DDAE25 /* Project object */;
+}

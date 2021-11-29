@@ -1,0 +1,258 @@
+//
+//  MainViewController.swift
+//  KoreaTravelMasterApp
+//
+//  Created by 박근보 on 2021/11/19.
+//
+
+import UIKit
+import RealmSwift
+
+class MainViewController: UIViewController {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet weak var sideMenuBarButton: UIBarButtonItem!
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var logoLabel: UILabel!
+    
+    
+    var mytravelSpotList: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true")
+    }
+    var seoulSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 1")
+    }
+    var gyeongGiDoSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 31")
+    }
+    var region = MyRegion.myRegion
+    //여행지 데이터 2차원 배열
+    let travelKorea: [[TravelData]] = [seoulTravelSpotData, gyeongGiDoTravelSpotData]
+    let localRealm = try! Realm()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        collectionViewSetting()
+        LabelSetting()
+        navigationConfigure()
+        firstRegionAlert()
+        
+        //최초 DB저장
+        saveTravelSpotDataToDB()
+        
+        //여행지 딕셔너리
+        makeTravelSpotDictionary()
+    }
+
+    // MARK: - Method
+    
+    //나중에 디자인 변경에 따라 수정예정
+    func navigationConfigure() {
+        
+//        navigationController?.navigationBar.layer.borderWidth = 1
+//        navigationController?.navigationBar.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func LabelSetting() {
+        
+        titleLabel.text = "한국"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        
+        percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(963) * 1000) / 10)%"
+        percentLabel.font = UIFont.systemFont(ofSize: 18)
+        
+        logoLabel.font = UIFont(name: "OTSBAggroB", size: 20)
+    }
+    
+    func collectionViewSetting() {
+        
+        let nibName = UINib(nibName: MainCollectionViewCell.identifier, bundle: nil)
+        imageCollectionView.delegate = self
+        imageCollectionView.dataSource = self
+        imageCollectionView.register(nibName, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
+        imageCollectionView.showsHorizontalScrollIndicator = false
+        imageCollectionView.isPagingEnabled = true
+        
+        cellLayout()
+    }
+    
+    func makeTravelSpotDictionary() {
+        
+        updatingSeoulDictionary()
+        updatingGyeongGiDoDictionary()
+        //이후에 추가데이터들 들어오면 추가
+    }
+    
+    //여행지데이터 디비에 쌓아주기
+    func saveTravelSpotDataToDB() {
+        
+        var nowStatus = UserDefaults.standard.bool(forKey: "doOnce")
+        var areaCode = 1
+        if nowStatus == false {
+            for spotData in travelKorea {
+                for i in spotData {
+                    let title = i.title
+                    let date = Date()
+                    let overview = ""
+                    let contentId = i.contentId
+                    let image = ""
+                    let stampStatus = false
+                    let latitude = i.latitude
+                    let longitude = i.longitude
+                            
+                    let travelSpotData = MytravelSpotObject(title: title, date: date, overview: overview, contentId: contentId, image: image, stampStatus: stampStatus, areaCode: areaCode, latitude: latitude, longitude: longitude)
+                            
+                    try! localRealm.write {
+                        localRealm.add(travelSpotData)
+                    }
+                }
+                //경기도 데이터도 받아주기 위해 (경기도 지역코드: 31)
+                areaCode += 30
+            }
+        }
+        nowStatus = true
+        UserDefaults.standard.set(nowStatus, forKey: "doOnce")
+    }
+    
+    @IBAction func findPlaceButtonClicked(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "TravelMapViewController") as! TravelMapViewController
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalTransitionStyle = .crossDissolve
+        nav.modalPresentationStyle = .fullScreen
+        
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    @IBAction func myTravelButtonClicked(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MytravelSpotViewController") as! MytravelSpotViewController
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalTransitionStyle = .crossDissolve
+        nav.modalPresentationStyle = .fullScreen
+        
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    @IBAction func settingButtonClicked(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    @IBAction func awardsButtonClicked(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "AwardsViewController") as! AwardsViewController
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalTransitionStyle = .crossDissolve
+        nav.modalPresentationStyle = .fullScreen
+        
+        self.present(nav, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Extension
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as? MainCollectionViewCell else { return UICollectionViewCell() }
+        
+        let row = indexPath.row
+        
+        cell.cellconfiguration(row: row)
+        cell.backgroundColor = .white
+        
+        return cell
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let page = Int(targetContentOffset.pointee.x / imageCollectionView.frame.width)
+        self.pageControl.currentPage = page
+        
+        //타이틀 라벨 페이지에따라 바꿔주기
+        switch page {
+        case 0:
+            titleLabel.text = "한국"
+            percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(963) * 1000) / 10)%"
+            backgroundImageView.isHidden = true
+        case 1:
+            titleLabel.text = "경기도"
+            percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
+            gyeongGiDoBackGroundConfigure()
+            backgroundImageView.isHidden = false
+        case 2:
+            titleLabel.text = "서울"
+            percentLabel.text = "달성률: \(round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10)%"
+            seoulGroundConfigure()
+        default: print("page Default")
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func cellLayout() {
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: imageCollectionView.bounds.height)
+        layout.scrollDirection = .horizontal
+        
+        imageCollectionView.collectionViewLayout = layout
+    }
+}
+
+
+/*
+ 구현해야하는 거
+ 1. 어노테이션 검색 기능(맵뷰(옵션), 나의여행지뷰, 전체여행지뷰) (해결 - 맵뷰제외하고)
+ 2. 다녀온 어노테이션 다른 핀이미지로 구현 (해결)
+ 3. 한번 다녀온 여행지 다시 갈때 얼럿 띄워주기(db에 날짜가 새로저장된다 등) (해결)
+ 4. 메인뷰 하단 페이지드 컨트롤 구현 (해결)
+ 5. 메인뷰 2번쨰 셀에 서울/경기도 퍼즐 조각 넣고 레이블 바꿔주기 (해결)
+ 6. 데이터 최신 순으로 쌓이게 (해결)
+ 7. 어노테이션뷰 이미지 밑에 타이틀 레이블
+ 8. 마지막에 전체적으로 디자인 개선
+ 9. overView 에 </br> 이런 것들 나중에 제거 처리. (해결)
+ 10. 콜렉션뷰 인덱스패스가 이상하게 넘어간다 해결해야함. (해결)
+ 11. 올트레블스팟뷰 오토레이아웃 수정
+ 12. 화면전환코드 좀더 다채롭게? 오른쪽에서 왼쪽으로 솩 넘어가게끔
+ 13. 전체 여행지뷰에서 검색할때 검색어를 여행지제목으로 딱 맞게 입력하면 검색색깔이 그대로 테이블뷰에도 적용되어버린다.(해결)
+ 14. 화면이 작은기기(SE 2세대, 아이폰8)에서 화면이 잘리는 현상 존재. (해결)
+ 15. 서울용 커스텀핀이 너무밝음 채도 좀 낮춰야함. (지역별 커스텀핀은 안하는 걸로 결정)
+ 16. 복구 직후 테이블뷰로 들어가면 런타임 에러 발생.
+ 
+ 오늘 구현한 거(11.29)
+ 1. 메인뷰 퍼센트레이블 처음 켰을 때 퍼센트 잘못 표기되는거 오류 수정
+ 2. 나의여행지뷰컨, 모든여행지뷰컨에서 서치할 때, 여행지명을 똑같이 그대로 검색해버리면 볼드체가 검색을 안할 때도 남아버리는 현상 해결
+ 3. API통신으로 받아온 오버뷰에서 <br>,<br/>,특수문자 등 가독성에 지장을 주는 요소들 제거
+ 4. 노란색 경고 갯수 줄임 (15 -> 5)
+ 5. 로고, 런치 스크린, 앱아이콘 구현
+ 6. 세팅뷰컨 나의 지역 설정 기능 구현 -> 맵뷰 초기지역 설정처리용도
+ 7. 메인뷰컨 지역 달성률에따라 조건문 대응.
+ 8. 메인뷰컨 한국지도 이미지겹쳐서 구현
+ 
+ */

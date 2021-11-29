@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="KoreaTravelMasterApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KoreaForMain" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-Vn-c5h">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongGiDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-e1-v9J">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GangWonDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-pv-hOy">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChungBukForMain" translatesAutoresizingMaskIntoConstraints="NO" id="cFM-bZ-KKu">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChungNamForMain" translatesAutoresizingMaskIntoConstraints="NO" id="Tn9-qu-hwi">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JonBukForMain" translatesAutoresizingMaskIntoConstraints="NO" id="k6R-7e-Ii6">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JonNamForMain" translatesAutoresizingMaskIntoConstraints="NO" id="w9N-2b-9EY">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongBukForMain" translatesAutoresizingMaskIntoConstraints="NO" id="dZf-6O-XW6">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongNamForMain" translatesAutoresizingMaskIntoConstraints="NO" id="Pmy-uV-aYS">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JejuDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-4l-Dlf">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DokDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-0I-7Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Fop-e1-v9J" secondAttribute="bottom" id="0lQ-kW-tB8"/>
+                <constraint firstItem="cFM-bZ-KKu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1I1-wt-iF3"/>
+                <constraint firstItem="w9N-2b-9EY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1fA-6f-FXn"/>
+                <constraint firstAttribute="trailing" secondItem="w9N-2b-9EY" secondAttribute="trailing" id="22A-9x-H48"/>
+                <constraint firstItem="dZf-6O-XW6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2dT-ap-xYY"/>
+                <constraint firstAttribute="trailing" secondItem="eN8-4l-Dlf" secondAttribute="trailing" id="4C4-KI-P6k"/>
+                <constraint firstAttribute="bottom" secondItem="k6R-7e-Ii6" secondAttribute="bottom" id="4MC-Qn-t3M"/>
+                <constraint firstAttribute="trailing" secondItem="dZf-6O-XW6" secondAttribute="trailing" id="6GJ-3D-Ag8"/>
+                <constraint firstAttribute="bottom" secondItem="6Iv-0I-7Gj" secondAttribute="bottom" id="6dQ-Dl-Qwq"/>
+                <constraint firstAttribute="bottom" secondItem="Tn9-qu-hwi" secondAttribute="bottom" id="8Ie-7M-TW8"/>
+                <constraint firstItem="eN8-4l-Dlf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CqU-TJ-KCm"/>
+                <constraint firstItem="k6R-7e-Ii6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KSl-hv-MNj"/>
+                <constraint firstItem="Pmy-uV-aYS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KtC-vr-dqx"/>
+                <constraint firstItem="VWH-Vn-c5h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MwY-TS-4cx"/>
+                <constraint firstAttribute="bottom" secondItem="dZf-6O-XW6" secondAttribute="bottom" id="O7s-xy-jT7"/>
+                <constraint firstItem="cFM-bZ-KKu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PQj-tq-dd1"/>
+                <constraint firstItem="eN8-4l-Dlf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qga-77-xQh"/>
+                <constraint firstAttribute="trailing" secondItem="Pmy-uV-aYS" secondAttribute="trailing" id="RQ5-Rh-iCx"/>
+                <constraint firstItem="k6R-7e-Ii6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T1Y-u0-jK8"/>
+                <constraint firstAttribute="trailing" secondItem="6Iv-0I-7Gj" secondAttribute="trailing" id="TJX-Tt-Dkt"/>
+                <constraint firstItem="w9N-2b-9EY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="U1K-fZ-ZUL"/>
+                <constraint firstItem="Tn9-qu-hwi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UUE-kO-sxO"/>
+                <constraint firstItem="VWH-Vn-c5h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WcN-21-nJQ"/>
+                <constraint firstAttribute="bottom" secondItem="cFM-bZ-KKu" secondAttribute="bottom" id="YMs-sw-qiM"/>
+                <constraint firstAttribute="bottom" secondItem="w9N-2b-9EY" secondAttribute="bottom" id="ZAm-fX-i3E"/>
+                <constraint firstItem="Fop-e1-v9J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZOP-aO-MoI"/>
+                <constraint firstAttribute="trailing" secondItem="m4V-pv-hOy" secondAttribute="trailing" id="Zb7-UO-uM8"/>
+                <constraint firstAttribute="trailing" secondItem="k6R-7e-Ii6" secondAttribute="trailing" id="a25-tL-60A"/>
+                <constraint firstItem="6Iv-0I-7Gj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ahd-e1-5A8"/>
+                <constraint firstItem="Tn9-qu-hwi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="efX-Of-tWh"/>
+                <constraint firstAttribute="trailing" secondItem="Tn9-qu-hwi" secondAttribute="trailing" id="erZ-uL-wPp"/>
+                <constraint firstItem="m4V-pv-hOy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gaR-D0-PUh"/>
+                <constraint firstItem="dZf-6O-XW6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="h7p-fy-0HV"/>
+                <constraint firstAttribute="bottom" secondItem="VWH-Vn-c5h" secondAttribute="bottom" id="k4m-Fy-A5h"/>
+                <constraint firstAttribute="trailing" secondItem="VWH-Vn-c5h" secondAttribute="trailing" id="m5C-1c-jxk"/>
+                <constraint firstAttribute="bottom" secondItem="eN8-4l-Dlf" secondAttribute="bottom" id="nzD-oP-cpJ"/>
+                <constraint firstItem="Fop-e1-v9J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oJk-hD-rCH"/>
+                <constraint firstAttribute="bottom" secondItem="Pmy-uV-aYS" secondAttribute="bottom" id="pEr-bZ-HuL"/>
+                <constraint firstItem="m4V-pv-hOy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pTP-YV-3o8"/>
+                <constraint firstAttribute="trailing" secondItem="cFM-bZ-KKu" secondAttribute="trailing" id="peB-bu-z1T"/>
+                <constraint firstAttribute="trailing" secondItem="Fop-e1-v9J" secondAttribute="trailing" id="pgE-kk-QO3"/>
+                <constraint firstAttribute="bottom" secondItem="m4V-pv-hOy" secondAttribute="bottom" id="rbJ-Wn-kHe"/>
+                <constraint firstItem="Pmy-uV-aYS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rwR-dE-exC"/>
+                <constraint firstItem="6Iv-0I-7Gj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s2F-WD-eqy"/>
+            </constraints>
+            <size key="customSize" width="421" height="522"/>
+            <connections>
+                <outlet property="chungBukImageView" destination="cFM-bZ-KKu" id="Xwh-nb-dMv"/>
+                <outlet property="chungNamImageView" destination="Tn9-qu-hwi" id="Tny-Cp-UIb"/>
+                <outlet property="dokDoImageView" destination="6Iv-0I-7Gj" id="rh7-cd-VLW"/>
+                <outlet property="gangWonDoImageView" destination="m4V-pv-hOy" id="nXd-Xo-WZA"/>
+                <outlet property="gyeongBukImageView" destination="dZf-6O-XW6" id="Qxn-lA-j9M"/>
+                <outlet property="gyeongGiDoImageView" destination="Fop-e1-v9J" id="9oG-SY-lKf"/>
+                <outlet property="gyeongNamImageView" destination="Pmy-uV-aYS" id="Ode-rV-Z24"/>
+                <outlet property="jejuDoImageView" destination="eN8-4l-Dlf" id="2er-IS-PfD"/>
+                <outlet property="jonBukImageView" destination="k6R-7e-Ii6" id="Ng4-2j-vGP"/>
+                <outlet property="jonNamImageView" destination="w9N-2b-9EY" id="A0R-EW-Pi3"/>
+                <outlet property="mainImageView" destination="VWH-Vn-c5h" id="K0L-Gj-AZb"/>
+            </connections>
+            <point key="canvasLocation" x="712.31884057971024" y="154.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ChungBukForMain" width="2048" height="2048"/>
+        <image name="ChungNamForMain" width="2048" height="2048"/>
+        <image name="DokDoForMain" width="2048" height="2048"/>
+        <image name="GangWonDoForMain" width="2048" height="2048"/>
+        <image name="GyeongBukForMain" width="2048" height="2048"/>
+        <image name="GyeongGiDoForMain" width="2048" height="2048"/>
+        <image name="GyeongNamForMain" width="2048" height="2048"/>
+        <image name="JejuDoForMain" width="2048" height="2048"/>
+        <image name="JonBukForMain" width="2048" height="2048"/>
+        <image name="JonNamForMain" width="2048" height="2048"/>
+        <image name="KoreaForMain" width="2048" height="2048"/>
+    </resources>
+</document>
