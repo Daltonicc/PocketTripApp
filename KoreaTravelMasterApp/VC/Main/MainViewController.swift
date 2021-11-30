@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var logoLabel: UILabel!
+    @IBOutlet weak var logoButton: UIButton!
     
     
     var mytravelSpotList: Results<MytravelSpotObject>! {
@@ -37,15 +37,19 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         collectionViewSetting()
-        LabelSetting()
         navigationConfigure()
         firstRegionAlert()
-        
+        LabelSetting()
         //최초 DB저장
         saveTravelSpotDataToDB()
-        
         //여행지 딕셔너리
         makeTravelSpotDictionary()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+
     }
 
     // MARK: - Method
@@ -65,7 +69,8 @@ class MainViewController: UIViewController {
         percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(963) * 1000) / 10)%"
         percentLabel.font = UIFont.systemFont(ofSize: 18)
         
-        logoLabel.font = UIFont(name: "OTSBAggroB", size: 20)
+        logoButton.titleLabel?.font = UIFont(name: "OTSBAggroB", size: 20)
+        logoButton.isEnabled = false
     }
     
     func collectionViewSetting() {
@@ -246,14 +251,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
  15. 서울용 커스텀핀이 너무밝음 채도 좀 낮춰야함. (지역별 커스텀핀은 안하는 걸로 결정)
  16. 복구 직후 테이블뷰로 들어가면 런타임 에러 발생.
  
- 오늘 구현한 거(11.29)
- 1. 메인뷰 퍼센트레이블 처음 켰을 때 퍼센트 잘못 표기되는거 오류 수정
- 2. 나의여행지뷰컨, 모든여행지뷰컨에서 서치할 때, 여행지명을 똑같이 그대로 검색해버리면 볼드체가 검색을 안할 때도 남아버리는 현상 해결
- 3. API통신으로 받아온 오버뷰에서 <br>,<br/>,특수문자 등 가독성에 지장을 주는 요소들 제거
- 4. 노란색 경고 갯수 줄임 (15 -> 5)
- 5. 로고, 런치 스크린, 앱아이콘 구현
- 6. 세팅뷰컨 나의 지역 설정 기능 구현 -> 맵뷰 초기지역 설정처리용도
- 7. 메인뷰컨 지역 달성률에따라 조건문 대응.
- 8. 메인뷰컨 한국지도 이미지겹쳐서 구현
+ 오늘 구현한 거(11.30)
+ 1. 나의 여행지뷰 딜리트기능 추가
+ 2. 디버깅
  
  */

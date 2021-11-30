@@ -32,7 +32,7 @@ extension TravelMapViewController {
     // 위치 서비스 미활성화시 경고 알림.
     func locationAlertConfigure() {
         
-        let alert = UIAlertController(title: "주의!", message: "위치 서비스 기능이 꺼져 있습니다. 스탬프를 찍기 위해 위치 서비스 기능을 켜주세요.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "주의!", message: "위치 서비스 기능이 꺼져 있습니다. 퍼즐을 모으기 위해 위치 서비스 기능을 켜주세요.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
         let settingMoveAction = UIAlertAction(title: "설정", style: .default) { _ in
             
@@ -57,7 +57,7 @@ extension TravelMapViewController {
     
     func collectActionAlertConfigure() {
         
-        let alert = UIAlertController(title: nil, message: "성공적으로 여행지 조각을 획득했습니다!", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "성공적으로 여행지 퍼즐을 획득했습니다!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { _ in
             self.mapStampView.isHidden = true
         }
@@ -68,7 +68,7 @@ extension TravelMapViewController {
     
     func collectAlreadyDoneAlertConfigure() {
         
-        let alert = UIAlertController(title: "이미 조각을 획득한 여행지입니다", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "이미 퍼즐을 획득한 여행지입니다", message: nil, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { _ in
             self.mapStampView.isHidden = true
         }
@@ -96,7 +96,7 @@ extension TravelMapViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let alreadyGet = UIAlertAction(title: "다녀온 곳만 보기", style: .default) { _ in
+        let alreadyGet = UIAlertAction(title: "퍼즐을 획득한 곳만 보기", style: .default) { _ in
             if self.AllSpotListDidStamp.count == 0 {
                 self.doNotHaveStampAlertConfigure()
             } else {

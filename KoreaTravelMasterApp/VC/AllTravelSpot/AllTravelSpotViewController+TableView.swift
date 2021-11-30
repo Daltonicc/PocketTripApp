@@ -57,15 +57,12 @@ extension AllTravelSpotViewController: UITableViewDelegate, UITableViewDataSourc
                     spotData.setValue("\(image)", forKey: "image")
                 }
                 vc.spotData = spotData
-                nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
             vc.spotData = spotData
-            nav.modalPresentationStyle = .automatic
             present(nav, animated: true, completion: nil)
         }
-
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -77,10 +74,10 @@ extension AllTravelSpotViewController: UITableViewDelegate, UITableViewDataSourc
         
         let headerView = UIView()
         let _ = headerView.safeAreaLayoutGuide
-        headerView.bounds = headerView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        headerView.bounds = headerView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
         
         let sectionLabel = UILabel()
-        sectionLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        sectionLabel.font = UIFont.boldSystemFont(ofSize: 22)
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         if isFiltering {

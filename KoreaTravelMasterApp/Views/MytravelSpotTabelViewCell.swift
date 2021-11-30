@@ -28,11 +28,15 @@ class MytravelSpotTabelViewCell: UITableViewCell {
         if imageURL != nil {
             spotImageView.kf.setImage(with: imageURL)
         } else {
-            spotImageView.image = UIImage(systemName: "xmark")
+            spotImageView.image = UIImage(named: "defaultImage")
         }
+        spotImageView.layer.cornerRadius = 5
+        
         spotTitleLabel.text = row.title
+        spotTitleLabel.adjustsFontSizeToFitWidth = true
+        spotTitleLabel.font = UIFont.systemFont(ofSize: 18)
+        
         getDateLabel.text = dateFormatting(date: row.date)
-        spotTitleLabel.font = UIFont.systemFont(ofSize: 20)
     }
     
     func dateFormatting(date: Date) -> String {
@@ -49,7 +53,7 @@ class MytravelSpotTabelViewCell: UITableViewCell {
         let searchTitle = NSMutableAttributedString(string: filterRow.title)
         let titleRange = (filterRow.title as NSString).range(of: searchBarText, options: .caseInsensitive)
         
-        searchTitle.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 21), range: titleRange)
+        searchTitle.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 19), range: titleRange)
         
         spotTitleLabel.attributedText = searchTitle
     }

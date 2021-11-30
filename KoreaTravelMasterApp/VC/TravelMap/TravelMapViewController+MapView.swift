@@ -189,11 +189,15 @@ extension TravelMapViewController: CLLocationManagerDelegate {
     func annotationClicked(annotation: MKPointAnnotation) {
         self.titleLabel.text = annotation.title
         self.overViewTextView.text = APIManager.shared.overviewData
-        if let imageURL = URL(string: APIManager.shared.imageData) {
-            self.detailImageView.kf.setImage(with: imageURL)
+        let image = APIManager.shared.imageData
+        if image == "" {
+            detailImageView.image = UIImage(named: "defaultImage")
         } else {
-            //url없을때 처리. 이미지 없다는 그림파일 하나 만들어주자 일단은 xmark로 대체.
-            self.detailImageView.image = UIImage(systemName: "xmark")
+            if let imageURL = URL(string: image) {
+                self.detailImageView.kf.setImage(with: imageURL)
+            } else {
+
+            }
         }
     }
     
@@ -205,7 +209,7 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             //조건문으로 거리 100미터 이하일 때만 버튼 누를 수 있게 처리
             print(distanceFromUserLocation)
             // 테스트용. 거리 10만으로 지정. 나중에 100으로 바꾸자
-            if distanceFromUserLocation > 100000 {
+            if distanceFromUserLocation > 10000 {
                 collectButton.isEnabled = false
                 cautionButton.isHidden = false
             } else {

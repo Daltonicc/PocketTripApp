@@ -38,8 +38,10 @@ class TravelSpotDetailViewController: UIViewController {
         
         if let imageURL = URL(string: spotData.image) {
             self.spotImageView.kf.setImage(with: imageURL)
+            spotImageView.contentMode = .scaleToFill
         } else {
-            spotImageView.image = UIImage(systemName: "xmark")
+            spotImageView.image = UIImage(named: "defaultImage")
+            spotImageView.contentMode = .scaleAspectFit
         }
         spotOverviewTextView.backgroundColor = .white
         spotOverviewTextView.text = spotData.overview

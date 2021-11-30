@@ -50,7 +50,7 @@ extension MainViewController {
     
     func seoulGroundConfigure() {
         
-        let seoulPercent = round(Double(seoulSpotListDidStamp.count) / Double(708) * 1000) / 10
+        let seoulPercent = round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10
         
         switch seoulPercent {
         case 0...24.99:  backgroundImageView.image = UIImage(named: "SeoulPuzzle0")

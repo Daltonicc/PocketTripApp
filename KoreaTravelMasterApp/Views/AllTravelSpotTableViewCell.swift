@@ -22,7 +22,8 @@ class AllTravelSpotTableViewCell: UITableViewCell {
     func cellConfigure(row: MytravelSpotObject) {
         
         titleLabel.text = row.title
-        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
+        titleLabel.adjustsFontSizeToFitWidth = true
     }
     
     func cellSearchConfigure(searchController: UISearchController, filterRow: MytravelSpotObject) {
@@ -31,7 +32,7 @@ class AllTravelSpotTableViewCell: UITableViewCell {
         let searchTitle = NSMutableAttributedString(string: filterRow.title)
         let titleRange = (filterRow.title as NSString).range(of: searchBarText, options: .caseInsensitive)
         
-        searchTitle.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 21), range: titleRange)
+        searchTitle.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 19), range: titleRange)
         
         titleLabel.attributedText = searchTitle
     }

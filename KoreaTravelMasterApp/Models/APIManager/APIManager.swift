@@ -32,6 +32,15 @@ class APIManager {
                 
                 let overview = json["response"]["body"]["items"]["item"]["overview"].stringValue.replacingOccurrences(of: "<br>", with: "")
                 let overview2 = overview.replacingOccurrences(of: "<br />", with: "\n")
+                                        .replacingOccurrences(of: "</b>", with: "")
+                                        .replacingOccurrences(of: "<u>", with: "\n")
+                                        .replacingOccurrences(of: "</a>", with: "\n")
+                                        .replacingOccurrences(of: "<a href=", with: "")
+                                        .replacingOccurrences(of: "title=", with: "")
+                                        .replacingOccurrences(of: "여행정보 변동사항 페이지로 이동", with: "")
+                                        .replacingOccurrences(of: "</u>", with: "\n")
+                                        .replacingOccurrences(of: "<b>", with: "")
+                
                 let image = json["response"]["body"]["items"]["item"]["firstimage"].stringValue
                 let contentId = json["response"]["body"]["items"]["item"]["contentid"].intValue
 

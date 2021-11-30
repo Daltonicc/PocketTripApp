@@ -19,16 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포켓트립" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hb-jU-b0e">
-                                <rect key="frame" x="20" y="54" width="100" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="YPx-Dg-PFt"/>
-                                    <constraint firstAttribute="height" constant="35" id="rVt-s2-pOn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kol-xv-LFQ">
                                 <rect key="frame" x="0.0" y="188.66666666666669" width="428" height="559.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,10 +72,8 @@
                             <constraint firstItem="kol-xv-LFQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8kZ-GY-yqU"/>
                             <constraint firstItem="8gR-px-LOx" firstAttribute="top" secondItem="xkM-53-su3" secondAttribute="bottom" id="9PJ-wj-bW5"/>
                             <constraint firstItem="8gR-px-LOx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AGh-mj-Fzk"/>
-                            <constraint firstItem="7Hb-jU-b0e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="54" id="Aof-Nw-YYU"/>
                             <constraint firstItem="uw3-9D-cAA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CPn-E5-r0c"/>
                             <constraint firstItem="euj-YD-Pf2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F15-ny-7Qe"/>
-                            <constraint firstItem="7Hb-jU-b0e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="JEw-58-1xK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uw3-9D-cAA" secondAttribute="trailing" id="LI3-ht-Vej"/>
                             <constraint firstItem="kol-xv-LFQ" firstAttribute="top" secondItem="8gR-px-LOx" secondAttribute="bottom" id="LYd-xr-UqZ"/>
                             <constraint firstItem="xkM-53-su3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NC4-Yj-zm1"/>
@@ -97,6 +85,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title=" " id="XHC-xJ-9XX">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="eyg-gH-Lny">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2NZ-wB-qGr">
+                                <rect key="frame" x="20" y="6.6666666666666679" width="95" height="31.000000000000004"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="포켓트립">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="done" id="uPO-mn-SqO">
                                 <imageReference key="image" image="settingIcon" symbolScale="large"/>
@@ -123,7 +121,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="uw3-9D-cAA" id="bEc-fl-ZYa"/>
                         <outlet property="imageCollectionView" destination="kol-xv-LFQ" id="KcN-WB-p8j"/>
-                        <outlet property="logoLabel" destination="7Hb-jU-b0e" id="eRg-cf-2dz"/>
+                        <outlet property="logoButton" destination="2NZ-wB-qGr" id="2r6-xL-zP3"/>
                         <outlet property="pageControl" destination="euj-YD-Pf2" id="A1c-rX-gCV"/>
                         <outlet property="percentLabel" destination="8gR-px-LOx" id="Saq-kG-cEb"/>
                         <outlet property="sideMenuBarButton" destination="uPO-mn-SqO" id="jus-6c-ixL"/>
@@ -203,12 +201,12 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-GI-Ol4">
-                                        <rect key="frame" x="125.66666666666667" y="15" width="34.666666666666671" height="24"/>
+                                        <rect key="frame" x="39" y="15" width="208" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rZL-xd-6XM">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="rZL-xd-6XM">
                                         <rect key="frame" x="61" y="49" width="165" height="177"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <constraints>
@@ -234,6 +232,7 @@
                                     <constraint firstAttribute="height" constant="400" id="iaj-VV-KO3"/>
                                     <constraint firstAttribute="trailing" secondItem="j3b-qM-g90" secondAttribute="trailing" constant="10" id="j7B-bN-6Kd"/>
                                     <constraint firstItem="j3b-qM-g90" firstAttribute="leading" secondItem="nuU-Lg-9Eg" secondAttribute="leading" constant="10" id="lR6-xX-f63"/>
+                                    <constraint firstItem="BaN-mX-Z9C" firstAttribute="leading" secondItem="0ju-GI-Ol4" secondAttribute="trailing" constant="10" id="plg-WF-FxV"/>
                                     <constraint firstItem="NBW-gX-be6" firstAttribute="top" secondItem="j3b-qM-g90" secondAttribute="bottom" constant="10" id="qhd-Cu-oYw"/>
                                     <constraint firstItem="BaN-mX-Z9C" firstAttribute="leading" secondItem="rZL-xd-6XM" secondAttribute="trailing" constant="31" id="tSJ-yC-QlM"/>
                                     <constraint firstItem="0ju-GI-Ol4" firstAttribute="top" secondItem="nuU-Lg-9Eg" secondAttribute="top" constant="15" id="vwt-l8-xcZ"/>
@@ -520,7 +519,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v38-xC-9gO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="v38-xC-9gO">
                                 <rect key="frame" x="0.0" y="44" width="428" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="263" id="5pk-xl-G6w"/>
@@ -609,8 +608,8 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="defaultImage" width="520" height="520"/>
         <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="112"/>
-        <image name="loadIcon" width="1300" height="1300"/>
         <image name="mapIcon" width="28" height="28"/>
         <image name="myTravelSpotIcon" width="28" height="28"/>
         <image name="scope" catalog="system" width="128" height="122"/>
