@@ -25,7 +25,6 @@
 		6A950BBD2746B17300DDAE25 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BBC2746B17300DDAE25 /* AwardsViewController.swift */; };
 		6A950BC02748CECD00DDAE25 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BBE2748CECD00DDAE25 /* MainCollectionViewCell.swift */; };
 		6A950BC12748CECD00DDAE25 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A950BBF2748CECD00DDAE25 /* MainCollectionViewCell.xib */; };
-		6A950BC4274A5D6400DDAE25 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BC3274A5D6400DDAE25 /* SideMenu */; };
 		6A950BCB274A6A0E00DDAE25 /* TravelMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */; };
 		6A950BCE274A765C00DDAE25 /* SeoulData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCD274A765C00DDAE25 /* SeoulData.swift */; };
 		6A950BD0274BA7A100DDAE25 /* TravelDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BCF274BA7A100DDAE25 /* TravelDataStruct.swift */; };
@@ -46,6 +45,7 @@
 		6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */; };
 		6AC0C41C27550A3D00D876BD /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */; };
 		6AC0C4202755454200D876BD /* MyRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C41F2755454200D876BD /* MyRegion.swift */; };
+		6AC0C443275690E700D876BD /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C442275690E700D876BD /* SkeletonView */; };
 		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,10 +93,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC0C4122754177100D876BD /* Zip in Frameworks */,
+				6AC0C443275690E700D876BD /* SkeletonView in Frameworks */,
 				6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */,
 				6A950BDE274BC37D00DDAE25 /* Kingfisher in Frameworks */,
 				6A950BDB274BC35F00DDAE25 /* SwiftyJSON in Frameworks */,
-				6A950BC4274A5D6400DDAE25 /* SideMenu in Frameworks */,
 				6A950BD8274BC33C00DDAE25 /* Alamofire in Frameworks */,
 				6A950BEE274E144200DDAE25 /* Realm in Frameworks */,
 			);
@@ -275,13 +275,13 @@
 			);
 			name = KoreaTravelMasterApp;
 			packageProductDependencies = (
-				6A950BC3274A5D6400DDAE25 /* SideMenu */,
 				6A950BD7274BC33C00DDAE25 /* Alamofire */,
 				6A950BDA274BC35F00DDAE25 /* SwiftyJSON */,
 				6A950BDD274BC37D00DDAE25 /* Kingfisher */,
 				6A950BED274E144200DDAE25 /* Realm */,
 				6A950BEF274E144200DDAE25 /* RealmSwift */,
 				6AC0C4112754177100D876BD /* Zip */,
+				6AC0C442275690E700D876BD /* SkeletonView */,
 			);
 			productName = KoreaTravelMasterApp;
 			productReference = 6A950B9E2742C56B00DDAE25 /* KoreaTravelMasterApp.app */;
@@ -312,12 +312,12 @@
 			);
 			mainGroup = 6A950B952742C56B00DDAE25;
 			packageReferences = (
-				6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */,
 				6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6A950BD9274BC35F00DDAE25 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				6A950BDC274BC37D00DDAE25 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */,
+				6AC0C441275690E700D876BD /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 6A950B9F2742C56B00DDAE25 /* Products */;
 			projectDirPath = "";
@@ -523,7 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
@@ -536,6 +536,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
@@ -568,6 +569,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,14 +607,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -653,14 +647,17 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		6AC0C441275690E700D876BD /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6A950BC3274A5D6400DDAE25 /* SideMenu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A950BC2274A5D6400DDAE25 /* XCRemoteSwiftPackageReference "SideMenu" */;
-			productName = SideMenu;
-		};
 		6A950BD7274BC33C00DDAE25 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A950BD6274BC33C00DDAE25 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -690,6 +687,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */;
 			productName = Zip;
+		};
+		6AC0C442275690E700D876BD /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC0C441275690E700D876BD /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -12,6 +12,7 @@ import CoreLocation
 import CoreLocationUI
 import Kingfisher
 import RealmSwift
+import SkeletonView
 
 class TravelMapViewController: UIViewController {
 
@@ -98,11 +99,17 @@ class TravelMapViewController: UIViewController {
         mapStampView.layer.shadowRadius = 5
         mapStampView.layer.shadowColor = UIColor.gray.cgColor
         mapStampView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        
+    
         overViewTextView.isEditable = false
         
         detailImageView.layer.cornerRadius = 10
         detailImageView.backgroundColor = .white
+        detailImageView.isSkeletonable = true
+        detailImageView.showAnimatedGradientSkeleton()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+        }
         
         collectButton.layer.cornerRadius = 10
         collectButton.backgroundColor = .white

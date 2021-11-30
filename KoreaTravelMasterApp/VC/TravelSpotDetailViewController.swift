@@ -43,6 +43,13 @@ class TravelSpotDetailViewController: UIViewController {
             spotImageView.image = UIImage(named: "defaultImage")
             spotImageView.contentMode = .scaleAspectFit
         }
+        spotImageView.isSkeletonable = true
+        spotImageView.showAnimatedSkeleton()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.spotImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+        }
+        
         spotOverviewTextView.backgroundColor = .white
         spotOverviewTextView.text = spotData.overview
         spotOverviewTextView.isEditable = false

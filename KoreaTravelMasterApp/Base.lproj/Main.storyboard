@@ -387,7 +387,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljp-yx-2CH">
-                                                    <rect key="frame" x="0.0" y="10" width="48" height="27"/>
+                                                    <rect key="frame" x="0.0" y="10" width="350" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="IQp-8L-YyR"/>
                                                     </constraints>
@@ -410,6 +410,7 @@
                                                 <constraint firstItem="ovB-fu-uCk" firstAttribute="top" secondItem="Z44-d5-Mf7" secondAttribute="top" constant="10" id="qq6-1V-N3G"/>
                                                 <constraint firstAttribute="trailing" secondItem="ovB-fu-uCk" secondAttribute="trailing" id="rWk-SS-oTI"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ljp-yx-2CH" secondAttribute="bottom" constant="10" id="v0Q-ae-O1H"/>
+                                                <constraint firstItem="ovB-fu-uCk" firstAttribute="leading" secondItem="Ljp-yx-2CH" secondAttribute="trailing" id="xOm-QX-MzU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -463,7 +464,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1H-7A-x87">
-                                                    <rect key="frame" x="58" y="11" width="48" height="24"/>
+                                                    <rect key="frame" x="58" y="11" width="310" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -481,6 +482,7 @@
                                                 <constraint firstItem="O1H-7A-x87" firstAttribute="top" secondItem="9H7-Nq-XcS" secondAttribute="topMargin" id="LJC-hp-mMG"/>
                                                 <constraint firstAttribute="bottom" secondItem="WPf-bt-tjK" secondAttribute="bottom" constant="10" id="Nf0-YT-0MC"/>
                                                 <constraint firstItem="vct-qj-Ynl" firstAttribute="top" secondItem="O1H-7A-x87" secondAttribute="bottom" constant="8" symbolic="YES" id="TK5-pe-p9C"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O1H-7A-x87" secondAttribute="trailing" id="gab-LC-on8"/>
                                                 <constraint firstItem="O1H-7A-x87" firstAttribute="leading" secondItem="WPf-bt-tjK" secondAttribute="trailing" constant="8" symbolic="YES" id="uAi-0e-3n3"/>
                                                 <constraint firstItem="vct-qj-Ynl" firstAttribute="leading" secondItem="WPf-bt-tjK" secondAttribute="trailing" constant="8" symbolic="YES" id="vqT-xl-iNX"/>
                                             </constraints>

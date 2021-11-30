@@ -180,6 +180,11 @@ extension TravelMapViewController: CLLocationManagerDelegate {
                 self.annotationClicked(annotation: selectAnnotation)
                 self.annotationDistanceCalculate(annotation: selectAnnotation)
                 self.mapStampView.isHidden = false
+                self.detailImageView.isSkeletonable = true
+                self.detailImageView.showAnimatedSkeleton()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+                })
             }
         } else {
             
