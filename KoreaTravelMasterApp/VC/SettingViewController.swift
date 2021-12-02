@@ -49,7 +49,7 @@ class SettingViewController: UIViewController {
     
     func presentActivityViewController() {
         
-        let fileName = (documenDirectoryPath()! as NSString).appendingPathComponent("archive.zip")
+        let fileName = (documenDirectoryPath()! as NSString).appendingPathComponent("PocketTrip.zip")
         let fileURL = URL(fileURLWithPath: fileName)
         let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
         self.present(vc, animated: true, completion: nil)
@@ -92,7 +92,7 @@ class SettingViewController: UIViewController {
         }
         do {
             //압축
-            let _ = try Zip.quickZipFiles(urlPaths, fileName: "archive")
+            let _ = try Zip.quickZipFiles(urlPaths, fileName: "PocketTrip")
             presentActivityViewController()
         }
         catch {
@@ -108,6 +108,27 @@ class SettingViewController: UIViewController {
         
         self.present(documentPicker, animated: true, completion: nil)
     }
+    
+    @IBAction func personalInfoButtonClicked(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        
+        vc.url = "https://daltonic.tistory.com/21"
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func askButtonClicked(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        
+        vc.url = "https://daltonic.tistory.com/22"
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
 
     @objc func backButtonAction() {
         
@@ -137,10 +158,10 @@ extension SettingViewController: UIDocumentPickerDelegate {
         if FileManager.default.fileExists(atPath: sandboxFileURL.path) {
             do {
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let fileURL = documentDirectory.appendingPathComponent("archive.zip")
+                let fileURL = documentDirectory.appendingPathComponent("PocketTrip.zip")
                 
                 try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
-                    showToast(vc: self, message: "복구가 완료되었습니다!")
+                    showToast(vc: self, message: "복구가 완료되었습니다. \n앱을 다시 실행해주세요!")
                 }, fileOutputHandler: { unzippedFile in
                     print("unzippedFile: \(unzippedFile)")
                 })
@@ -152,7 +173,7 @@ extension SettingViewController: UIDocumentPickerDelegate {
                 try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
                 
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let fileURL = documentDirectory.appendingPathComponent("archive.zip")
+                let fileURL = documentDirectory.appendingPathComponent("PocketTrip.zip")
                 
                 try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
                     showToast(vc: self, message: "복구가 완료되었습니다!")

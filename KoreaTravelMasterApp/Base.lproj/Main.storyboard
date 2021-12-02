@@ -183,7 +183,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-gX-be6">
                                         <rect key="frame" x="10" y="358" width="266" height="32"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="여행지 조각 모으기"/>
+                                        <state key="normal" title="여행지 퍼즐 모으기"/>
                                         <connections>
                                             <action selector="collectButtonClicked:" destination="Rds-8i-BdX" eventType="touchUpInside" id="pHB-WM-F8Z"/>
                                         </connections>
@@ -308,6 +308,20 @@
                                     <action selector="restoreButtonClicked:" destination="d6t-PJ-kZI" eventType="touchUpInside" id="9sR-TE-CIt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbb-x8-x7b">
+                                <rect key="frame" x="20" y="240" width="130" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="g5G-Do-YIk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="개인정보 처리방침">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="personalInfoButtonClicked:" destination="d6t-PJ-kZI" eventType="touchUpInside" id="LBo-ze-Z9Z"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-jU-mbf">
                                 <rect key="frame" x="20" y="67" width="103" height="39"/>
                                 <constraints>
@@ -345,6 +359,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-Oz-WXm">
+                                <rect key="frame" x="20" y="287" width="63" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="F3P-ib-qDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="문의하기">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonClicked:" destination="d6t-PJ-kZI" eventType="touchUpInside" id="NNU-Md-cI5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RKA-SU-MUM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -353,10 +381,14 @@
                             <constraint firstItem="8Fu-jU-mbf" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="9pr-5g-Mow"/>
                             <constraint firstItem="sRQ-1r-JBO" firstAttribute="top" secondItem="0pe-aj-q8U" secondAttribute="bottom" constant="8" symbolic="YES" id="FGK-G2-Jmb"/>
                             <constraint firstItem="sRQ-1r-JBO" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="RTP-30-9UI"/>
+                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="SYm-5M-gQd"/>
                             <constraint firstItem="0pe-aj-q8U" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="bhE-LQ-XZi"/>
                             <constraint firstItem="IDu-VY-tmE" firstAttribute="top" secondItem="RKA-SU-MUM" secondAttribute="top" constant="23" id="c11-uT-a8o"/>
                             <constraint firstItem="8Fu-jU-mbf" firstAttribute="top" secondItem="RKA-SU-MUM" secondAttribute="top" constant="23" id="fXN-Ny-GES"/>
+                            <constraint firstItem="Pbb-x8-x7b" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="jgq-eb-clf"/>
+                            <constraint firstItem="Pbb-x8-x7b" firstAttribute="top" secondItem="sRQ-1r-JBO" secondAttribute="bottom" constant="40" id="oKD-hu-a2l"/>
                             <constraint firstItem="RKA-SU-MUM" firstAttribute="trailing" secondItem="IDu-VY-tmE" secondAttribute="trailing" constant="25" id="rlZ-N8-Thn"/>
+                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="top" secondItem="Pbb-x8-x7b" secondAttribute="bottom" constant="8" symbolic="YES" id="w53-bG-hgo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -365,7 +397,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cA-Fq-wJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="-1232"/>
+            <point key="canvasLocation" x="2432" y="-1212"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Dbt-rS-t9V">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="zjo-GQ-mfk" customClass="WebViewController" customModule="KoreaTravelMasterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j6O-el-I0y">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-u9-2qQ">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BcC-Bi-OHA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VYN-u9-2qQ" firstAttribute="top" secondItem="BcC-Bi-OHA" secondAttribute="top" id="C4d-MA-oFi"/>
+                            <constraint firstItem="BcC-Bi-OHA" firstAttribute="bottom" secondItem="VYN-u9-2qQ" secondAttribute="bottom" id="ZRJ-Rc-6yb"/>
+                            <constraint firstItem="BcC-Bi-OHA" firstAttribute="trailing" secondItem="VYN-u9-2qQ" secondAttribute="trailing" id="yRF-BN-82c"/>
+                            <constraint firstItem="VYN-u9-2qQ" firstAttribute="leading" secondItem="BcC-Bi-OHA" secondAttribute="leading" id="zD1-ip-6kj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="VYN-u9-2qQ" id="HcG-Il-0ui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EN-ek-1nQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="-1219"/>
         </scene>
         <!--All Travel Spot View Controller-->
         <scene sceneID="wuh-hu-txT">
