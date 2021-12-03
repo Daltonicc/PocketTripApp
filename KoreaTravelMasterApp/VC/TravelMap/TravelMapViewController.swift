@@ -29,6 +29,10 @@ class TravelMapViewController: UIViewController {
     var AllSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true")
     }
+    var selectedAnnotation: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("contentId == \(contentId)")
+    }
+    
     var seoulSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 1")
     }
@@ -41,8 +45,10 @@ class TravelMapViewController: UIViewController {
     var gyeongGiDoSpotListNotDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == false AND areaCode == 31")
     }
+    
     let localRealm = try! Realm()
     let locationManager = CLLocationManager()
+    var contentId = 0
     var region = MyRegion.myRegion
     
     override func viewDidLoad() {

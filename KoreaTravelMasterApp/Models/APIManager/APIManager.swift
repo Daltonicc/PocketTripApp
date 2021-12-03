@@ -21,7 +21,7 @@ class APIManager {
     
     func getSpotDetailData(contentId: Int, result:@escaping (JSON) -> ()) {
         
-        let url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=x1Yng3r3y6at3kAxxFxixvYzgeDQ00GkPvFRr5lDcV3kZ%2FOkTi6ES0UTWcuAwAJQsd8Ue1U5j4CjCRg3giEa1w%3D%3D&overviewYN=Y&firstImageYN=Y&contentTypeId=12&contentId=\(contentId)&MobileOS=ETC&MobileApp=AppTest&_type=json"
+        let url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=\(APIKey().apiKey)&overviewYN=Y&firstImageYN=Y&contentTypeId=12&contentId=\(contentId)&MobileOS=ETC&MobileApp=AppTest&_type=json"
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
@@ -59,7 +59,7 @@ class APIManager {
     //서울이랑 경기도 필수데이터 앱에 내장시키기 위해 만들어준거 나중에 지워야함
     func getSeoulData() {
         
-        let url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=x1Yng3r3y6at3kAxxFxixvYzgeDQ00GkPvFRr5lDcV3kZ%2FOkTi6ES0UTWcuAwAJQsd8Ue1U5j4CjCRg3giEa1w%3D%3D&areaCode=31&numOfRows=450&contentTypeId=12&&cat1=A02&cat2=A0201&MobileOS=ETC&MobileApp=AppTest&_type=json"
+        let url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=\(APIKey().apiKey)&areaCode=31&numOfRows=450&contentTypeId=12&&cat1=A02&cat2=A0201&MobileOS=ETC&MobileApp=AppTest&_type=json"
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {

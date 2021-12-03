@@ -174,20 +174,34 @@ extension TravelMapViewController: CLLocationManagerDelegate {
         //스크롤 맨 위로 초기화
         overViewTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
         if let selectAnnotation = view.annotation as? MKPointAnnotation {
-            let contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
-            //어노테이션 클릭시 API통신
-            APIManager.shared.getSpotDetailData(contentId: contentId) { _ in
-                self.annotationClicked(annotation: selectAnnotation)
-                self.annotationDistanceCalculate(annotation: selectAnnotation)
-                self.mapStampView.isHidden = false
-                self.detailImageView.isSkeletonable = true
-                self.detailImageView.showAnimatedSkeleton()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
-                })
+//            let contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
+            contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
+            // 디비에 데이터 없을 때 API 통신
+            if selectedAnnotation.first?.overview == "" {
+                APIManager.shared.getSpotDetailData(contentId: contentId) { _ in
+                    self.mapStampView.isHidden = false
+                    self.annotationClicked(annotation: selectAnnotation)
+                    self.annotationDistanceCalculate(annotation: selectAnnotation)
+                    self.detailImageView.isSkeletonable = true
+                    self.detailImageView.showAnimatedSkeleton()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                        self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+                    })
+                }
+            } else {
+                //데이터 있으면 디비에서 가져옴
+                mapStampView.isHidden = false
+                annotationDistanceCalculate(annotation: selectAnnotation)
+                titleLabel.text = selectedAnnotation.first?.title
+                overViewTextView.text = selectedAnnotation.first?.overview
+                if let imageURL = URL(string: selectedAnnotation.first!.image) {
+                    self.detailImageView.kf.setImage(with: imageURL)
+                } else {
+                    print("imageURL 없음.")
+                }
             }
         } else {
-            
+            print("유저위치 클릭됨")
         }
     }
     

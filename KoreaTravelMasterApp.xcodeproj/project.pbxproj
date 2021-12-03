@@ -50,6 +50,7 @@
 		6AEEC3EB275A42BA008E8E28 /* AwardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC3E9275A42BA008E8E28 /* AwardsCollectionViewCell.swift */; };
 		6AEEC3EC275A42BA008E8E28 /* AwardsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEC3EA275A42BA008E8E28 /* AwardsCollectionViewCell.xib */; };
 		6AEEC3EF275A4311008E8E28 /* Awards+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC3EE275A4311008E8E28 /* Awards+CollectionView.swift */; };
+		6AEEC3F1275A4EEF008E8E28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC3F0275A4EEF008E8E28 /* Constant.swift */; };
 		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		6AEEC3E9275A42BA008E8E28 /* AwardsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AEEC3EA275A42BA008E8E28 /* AwardsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwardsCollectionViewCell.xib; sourceTree = "<group>"; };
 		6AEEC3EE275A4311008E8E28 /* Awards+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Awards+CollectionView.swift"; sourceTree = "<group>"; };
+		6AEEC3F0275A4EEF008E8E28 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 		6A950BD3274BC2E700DDAE25 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				6AEEC3F0275A4EEF008E8E28 /* Constant.swift */,
 				6A950BD4274BC30600DDAE25 /* APIManager.swift */,
 			);
 			path = APIManager;
@@ -396,6 +399,7 @@
 				6A950BC02748CECD00DDAE25 /* MainCollectionViewCell.swift in Sources */,
 				6A950BCB274A6A0E00DDAE25 /* TravelMapViewController.swift in Sources */,
 				6A950BBD2746B17300DDAE25 /* AwardsViewController.swift in Sources */,
+				6AEEC3F1275A4EEF008E8E28 /* Constant.swift in Sources */,
 				6A950BE0274CBD6300DDAE25 /* WelcomeViewController.swift in Sources */,
 				6A950BCE274A765C00DDAE25 /* SeoulData.swift in Sources */,
 				6A950BA42742C56B00DDAE25 /* SceneDelegate.swift in Sources */,
