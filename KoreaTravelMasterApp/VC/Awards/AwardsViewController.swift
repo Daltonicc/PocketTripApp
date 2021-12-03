@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AwardsViewController: UIViewController {
 
+    @IBOutlet weak var awardsCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItemConfigure()
+        collectionViewConfigure()
     }
 
     func navigationItemConfigure() {
@@ -22,6 +26,15 @@ class AwardsViewController: UIViewController {
         navigationItem.title = "업적"
         navigationItem.leftBarButtonItem = backButton
         navigationItem.leftBarButtonItem?.tintColor = .black
+    }
+    
+    func collectionViewConfigure() {
+        
+        let nibName = UINib(nibName: AwardsCollectionViewCell.identifier, bundle: nil)
+        awardsCollectionView.delegate = self
+        awardsCollectionView.dataSource = self
+        awardsCollectionView.register(nibName, forCellWithReuseIdentifier: AwardsCollectionViewCell.identifier)
+        
     }
     
     @objc func backButtonAction() {
