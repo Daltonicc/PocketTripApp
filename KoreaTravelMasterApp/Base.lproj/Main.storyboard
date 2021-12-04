@@ -115,11 +115,6 @@
                                     <action selector="findPlaceButtonClicked:" destination="BYZ-38-t0r" id="mvL-EG-GoT"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="medalImage" id="lPi-7V-dA1">
-                                <connections>
-                                    <action selector="awardsButtonClicked:" destination="BYZ-38-t0r" id="Ecf-tm-MRf"/>
-                                </connections>
-                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -716,7 +711,6 @@
         <image name="defaultImage" width="520" height="520"/>
         <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="112"/>
         <image name="mapIcon" width="28" height="28"/>
-        <image name="medalImage" width="50" height="50"/>
         <image name="myTravelSpotIcon" width="28" height="28"/>
         <image name="scope" catalog="system" width="128" height="122"/>
         <image name="settingIcon" width="28" height="28"/>

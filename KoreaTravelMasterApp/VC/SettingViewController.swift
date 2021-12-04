@@ -114,7 +114,7 @@ class SettingViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         
-        vc.url = "https://daltonic.tistory.com/21"
+        vc.url = "https://maze-mozzarella-6e5.notion.site/f6076135522144f7bbcb516967473533"
         
         self.present(vc, animated: true, completion: nil)
     }
@@ -124,7 +124,7 @@ class SettingViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         
-        vc.url = "https://daltonic.tistory.com/22"
+        vc.url = "https://maze-mozzarella-6e5.notion.site/be5406a8e2074bd9a8c01576a109b202"
         
         self.present(vc, animated: true, completion: nil)
     }
