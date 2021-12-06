@@ -94,7 +94,7 @@
 		6AEEC3EA275A42BA008E8E28 /* AwardsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwardsCollectionViewCell.xib; sourceTree = "<group>"; };
 		6AEEC3EE275A4311008E8E28 /* Awards+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Awards+CollectionView.swift"; sourceTree = "<group>"; };
 		6AEEC3F0275A4EEF008E8E28 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		6AEEC3F2275BFEBE008E8E28 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		6AEEC3F5275C0647008E8E28 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
 		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,12 +125,14 @@
 			path = MytravelSpot;
 			sourceTree = "<group>";
 		};
-		6A6F159A27517C9D0076E4FC /* Views */ = {
+		6A6F159A27517C9D0076E4FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6A950BAC2742C56C00DDAE25 /* LaunchScreen.storyboard */,
+				6A950BA72742C56B00DDAE25 /* Main.storyboard */,
 				6AEEC3ED275A42C0008E8E28 /* Cells */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		6A6F159D275244380076E4FC /* AllTravelSpot */ = {
@@ -161,15 +163,11 @@
 		6A950BA02742C56B00DDAE25 /* KoreaTravelMasterApp */ = {
 			isa = PBXGroup;
 			children = (
-				6AC0C41627550A2600D876BD /* Font */,
+				6AEEC3F6275CE7E5008E8E28 /* Resources */,
 				6AFD4AB32752C4F600B971B0 /* Models */,
-				6AFD4AB22752C49D00B971B0 /* VC */,
-				6A6F159A27517C9D0076E4FC /* Views */,
-				6A950BA12742C56B00DDAE25 /* AppDelegate.swift */,
-				6A950BA32742C56B00DDAE25 /* SceneDelegate.swift */,
-				6A950BA72742C56B00DDAE25 /* Main.storyboard */,
-				6A950BAC2742C56C00DDAE25 /* LaunchScreen.storyboard */,
-				6A950BAA2742C56C00DDAE25 /* Assets.xcassets */,
+				6A6F159A27517C9D0076E4FC /* View */,
+				6AFD4AB22752C49D00B971B0 /* Controller */,
+				6AC0C41627550A2600D876BD /* Font */,
 				6A950BAF2742C56C00DDAE25 /* Info.plist */,
 			);
 			path = KoreaTravelMasterApp;
@@ -190,7 +188,7 @@
 			children = (
 				6AEEC3F0275A4EEF008E8E28 /* Constant.swift */,
 				6A950BD4274BC30600DDAE25 /* APIManager.swift */,
-				6AEEC3F2275BFEBE008E8E28 /* APIKey.xcconfig */,
+				6AEEC3F5275C0647008E8E28 /* APIKey.xcconfig */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -201,7 +199,6 @@
 				6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */,
 				6A950BE5274D324800DDAE25 /* TravelMap+Extension.swift */,
 				6A950BE7274D527800DDAE25 /* TravelMap+MapView.swift */,
-				6A6F159427512F6D0076E4FC /* CustomAnnotation.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -263,20 +260,30 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		6AFD4AB22752C49D00B971B0 /* VC */ = {
+		6AEEC3F6275CE7E5008E8E28 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6AC0C4132754FB8700D876BD /* Main */,
+				6A950BA12742C56B00DDAE25 /* AppDelegate.swift */,
+				6A950BA32742C56B00DDAE25 /* SceneDelegate.swift */,
+				6A950BAA2742C56C00DDAE25 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6AFD4AB22752C49D00B971B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				6A950BDF274CBD6300DDAE25 /* WelcomeViewController.swift */,
 				6A6F159627514B860076E4FC /* TravelSpotDetailViewController.swift */,
 				6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */,
 				6AC0C4442757D37300D876BD /* WebViewController.swift */,
+				6AC0C4132754FB8700D876BD /* Main */,
 				6AEEC3E8275A427D008E8E28 /* Awards */,
 				6A950BE2274D31E800DDAE25 /* TravelMap */,
 				6A6F158F274F70FE0076E4FC /* MytravelSpot */,
 				6A6F159D275244380076E4FC /* AllTravelSpot */,
 			);
-			path = VC;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		6AFD4AB32752C4F600B971B0 /* Models */ = {
@@ -287,6 +294,7 @@
 				6A950BD3274BC2E700DDAE25 /* APIManager */,
 				6A950BCC274A762700DDAE25 /* TravelSpotData */,
 				6AC0C41F2755454200D876BD /* MyRegion.swift */,
+				6A6F159427512F6D0076E4FC /* CustomAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,7 +449,7 @@
 /* Begin XCBuildConfiguration section */
 		6A950BB02742C56C00DDAE25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AEEC3F2275BFEBE008E8E28 /* APIKey.xcconfig */;
+			baseConfigurationReference = 6AEEC3F5275C0647008E8E28 /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -503,7 +511,7 @@
 		};
 		6A950BB12742C56C00DDAE25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AEEC3F2275BFEBE008E8E28 /* APIKey.xcconfig */;
+			baseConfigurationReference = 6AEEC3F5275C0647008E8E28 /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

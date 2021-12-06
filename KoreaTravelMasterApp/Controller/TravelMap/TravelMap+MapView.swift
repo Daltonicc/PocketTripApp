@@ -174,13 +174,13 @@ extension TravelMapViewController: CLLocationManagerDelegate {
         //스크롤 맨 위로 초기화
         overViewTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
         if let selectAnnotation = view.annotation as? MKPointAnnotation {
-//            let contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
             contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
             // 디비에 데이터 없을 때 API 통신
             if selectedAnnotation.first?.overview == "" {
                 APIManager.shared.getSpotDetailData(contentId: contentId) { _ in
                     self.mapStampView.isHidden = false
                     self.annotationClicked(annotation: selectAnnotation)
+                    self.annotationSaveToDB()
                     self.annotationDistanceCalculate(annotation: selectAnnotation)
                     self.detailImageView.isSkeletonable = true
                     self.detailImageView.showAnimatedSkeleton()
@@ -220,6 +220,18 @@ extension TravelMapViewController: CLLocationManagerDelegate {
         }
     }
     
+    func annotationSaveToDB() {
+        
+        let selectedData = myTravelSpotList.filter("contentId == \(APIManager.shared.contentId)")
+        let overview = APIManager.shared.overviewData
+        let image = APIManager.shared.imageData
+        
+        try! localRealm.write {
+            selectedData.setValue("\(overview)", forKey: "overview")
+            selectedData.setValue("\(image)", forKey: "image")
+        }
+    }
+    
     //사용자 위치에서 어노테이션까지의 거리 계산하기
     func annotationDistanceCalculate(annotation: MKPointAnnotation) {
         
@@ -228,7 +240,7 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             //조건문으로 거리 100미터 이하일 때만 버튼 누를 수 있게 처리
             print(distanceFromUserLocation)
             // 테스트용. 거리 10만으로 지정. 나중에 100으로 바꾸자
-            if distanceFromUserLocation > 100 {
+            if distanceFromUserLocation > 10000 {
                 collectButton.isEnabled = false
                 cautionButton.isHidden = false
             } else {
