@@ -24,4 +24,10 @@ enum ComparableData {
     case seoulNotDoneStamp
     case gyeonGiDoDoneStamp
     case gyeonGiDoNotDoneStamp
+    case busanDoneStamp
+    case busanNotDoneStamp
+    case gyeongNamDoneStamp
+    case gyeongNamNotDoneStamp
+    case jejuDoneStamp
+    case jejuNotDoneStamp
 }

@@ -33,6 +33,15 @@ class MainCollectionViewCell: UICollectionViewCell {
     var gyeongGiDoSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 31")
     }
+    var busanSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 6")
+    }
+    var gyeongNamSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 36")
+    }
+    var jejuSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 39")
+    }
     let localRealm = try! Realm()
     
     override func awakeFromNib() {
@@ -43,11 +52,23 @@ class MainCollectionViewCell: UICollectionViewCell {
     func cellconfiguration(row: Int) {
         
         switch row {
+        case 0:
+            koreaConfigure()
+            regionNotHidden()
         case 1:
-            gyeongGiDoConfigure()
+            seoulConfigure()
             regionHidden()
         case 2:
-            seoulConfigure()
+            gyeongGiDoConfigure()
+            regionHidden()
+        case 3:
+            BusanConfigure()
+            regionHidden()
+        case 4:
+            GyeongNamConfigure()
+            regionHidden()
+        case 5:
+            JejuConfigure()
             regionHidden()
         default: print("cellDefault")
         }
@@ -67,43 +88,141 @@ class MainCollectionViewCell: UICollectionViewCell {
         dokDoImageView.isHidden = true
     }
     
-    func gyeongGiDoConfigure() {
+    func regionNotHidden() {
         
-        let gyeongGiDoPercent = round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10
-
-        switch gyeongGiDoPercent {
-        case 0...24.99: mainImageView.image = UIImage(named: "GyeongGiDo0")
-        case 25...49.99: mainImageView.image = UIImage(named: "GyeongGiDo25")
-        case 50...74.99: mainImageView.image = UIImage(named: "GyeongGiDo50")
-        case 75...99.99: mainImageView.image = UIImage(named: "GyeongGiDo75")
-        case 100:
-            if gyeongGiDoSpotListDidStamp.count == 708 {
-                mainImageView.image = UIImage(named: "GyeongGiDo100")
-            } else {
-                mainImageView.image = UIImage(named: "GyeongGiDo75")
-            }
-
-        default: mainImageView.image = UIImage(named: "GyeongGiDo0")
+        gyeongGiDoImageView.isHidden = false
+        gangWonDoImageView.isHidden = false
+        chungBukImageView.isHidden = false
+        chungNamImageView.isHidden = false
+        jonBukImageView.isHidden = false
+        jonNamImageView.isHidden = false
+        gyeongBukImageView.isHidden = false
+        gyeongNamImageView.isHidden = false
+        jejuDoImageView.isHidden = false
+        dokDoImageView.isHidden = false
+    }
+    
+    func koreaConfigure() {
+        
+        mainImageView.image = UIImage(named: "KoreaForMain")
+        //경기도
+        if gyeongGiDoSpotListDidStamp.count == 708 {
+            gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain(o)")
+        } else {
+            gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain")
+        }
+        //경상남도
+        if gyeongNamSpotListDidStamp.count == 729 {
+            gyeongNamImageView.image = UIImage(named: "GyeongNamForMain(o)")
+        } else {
+            gyeongNamImageView.image = UIImage(named: "GyeongNamForMain")
+        }
+        //제주도
+        if jejuSpotListDidStamp.count == 279 {
+            jejuDoImageView.image = UIImage(named: "JejuDoForMain(o)")
+        } else {
+            jejuDoImageView.image = UIImage(named: "JejuDoForMain")
         }
     }
     
     func seoulConfigure() {
         
-        let seoulPercent = round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10
+        let percent = round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10
         
-        switch seoulPercent {
-        case 0...24.99: mainImageView.image = UIImage(named: "Seoul0")
-        case 25...49.99: mainImageView.image = UIImage(named: "Seoul25")
-        case 50...74.99: mainImageView.image = UIImage(named: "Seoul50")
-        case 75...99.99: mainImageView.image = UIImage(named: "Seoul75")
+        switch percent {
+        case 0...9.99: mainImageView.image = UIImage(named: "Seoul0percent")
+        case 10...29.99: mainImageView.image = UIImage(named: "Seoul10percent")
+        case 30...59.99: mainImageView.image = UIImage(named: "Seoul30percent")
+        case 60...99.99: mainImageView.image = UIImage(named: "Seoul60percent")
         case 100:
             if seoulSpotListDidStamp.count == 255 {
-                mainImageView.image = UIImage(named: "Seoul100")
+                mainImageView.image = UIImage(named: "Seoul100percent")
             } else {
-                mainImageView.image = UIImage(named: "Seoul75")
+                mainImageView.image = UIImage(named: "Seoul60percent")
             }
                 
-        default: mainImageView.image = UIImage(named: "Seoul0")
+        default: mainImageView.image = UIImage(named: "Seoul0percent")
         }
     }
+    
+    func gyeongGiDoConfigure() {
+        
+        let percent = round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10
+
+        switch percent {
+        case 0...9.99: mainImageView.image = UIImage(named: "GyeongGiDo0percent")
+        case 10...29.99: mainImageView.image = UIImage(named: "GyeongGiDo10percent")
+        case 30...59.99: mainImageView.image = UIImage(named: "GyeongGiDo30percent")
+        case 60...99.99: mainImageView.image = UIImage(named: "GyeongGiDo60percent")
+        case 100:
+            if gyeongGiDoSpotListDidStamp.count == 708 {
+                mainImageView.image = UIImage(named: "GyeongGiDo100percent")
+            } else {
+                mainImageView.image = UIImage(named: "GyeongGiDo60percent")
+            }
+
+        default: mainImageView.image = UIImage(named: "GyeongGiDo0percent")
+        }
+    }
+    
+    func BusanConfigure() {
+        
+        let percent = round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10
+
+        switch percent {
+        case 0...9.99: mainImageView.image = UIImage(named: "Busan0percent")
+        case 10...29.99: mainImageView.image = UIImage(named: "Busan10percent")
+        case 30...59.99: mainImageView.image = UIImage(named: "Busan30percent")
+        case 60...99.99: mainImageView.image = UIImage(named: "Busan60percent")
+        case 100:
+            if busanSpotListDidStamp.count == 119 {
+                mainImageView.image = UIImage(named: "Busan100percent")
+            } else {
+                mainImageView.image = UIImage(named: "Busan60percent")
+            }
+
+        default: mainImageView.image = UIImage(named: "Busan0percent")
+        }
+    }
+    
+    func GyeongNamConfigure() {
+        
+        let percent = round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10
+
+        switch percent {
+        case 0...9.99: mainImageView.image = UIImage(named: "GyeongNam0percent")
+        case 10...29.99: mainImageView.image = UIImage(named: "GyeongNam10percent")
+        case 30...59.99: mainImageView.image = UIImage(named: "GyeongNam30percent")
+        case 60...99.99: mainImageView.image = UIImage(named: "GyeongNam60percent")
+        case 100:
+            if gyeongNamSpotListDidStamp.count == 729 {
+                mainImageView.image = UIImage(named: "GyeongNam100percent")
+            } else {
+                mainImageView.image = UIImage(named: "GyeongNam60percent")
+            }
+
+        default: mainImageView.image = UIImage(named: "GyeongNam0percent")
+        }
+    }
+    
+    func JejuConfigure() {
+        
+        let percent = round(Double(jejuSpotListDidStamp.count) / Double(279) * 1000) / 10
+
+        switch percent {
+        case 0...9.99: mainImageView.image = UIImage(named: "Jeju0percent")
+        case 10...29.99: mainImageView.image = UIImage(named: "Jeju10percent")
+        case 30...59.99: mainImageView.image = UIImage(named: "Jeju30percent")
+        case 60...99.99: mainImageView.image = UIImage(named: "Jeju60percent")
+        case 100:
+            if jejuSpotListDidStamp.count == 279 {
+                mainImageView.image = UIImage(named: "Jeju100percent")
+            } else {
+                mainImageView.image = UIImage(named: "Jeju60percent")
+            }
+
+        default: mainImageView.image = UIImage(named: "Jeju0percent")
+        }
+    }
+    
 }

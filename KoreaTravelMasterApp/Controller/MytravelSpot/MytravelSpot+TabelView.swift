@@ -17,7 +17,10 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
         } else {
             switch section {
             case 0: return seoulSpotListDidStamp.count
-            case 1: return gyeongGiDoSpotListDidStamp.count
+            case 1: return busanSpotListDidStamp.count
+            case 2: return gyeongGiDoSpotListDidStamp.count
+            case 3: return gyeongNamSpotListDidStamp.count
+            case 4: return jejuSpotListDidStamp.count
             default: return 0
             }
         }
@@ -29,7 +32,7 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
         if isFiltering {
             return 1
         } else {
-            return 2
+            return 5
         }
     }
     
@@ -47,8 +50,17 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
                 let seoulRow = seoulSpotListDidStamp[indexPath.row]
                 cell.cellconfigure(row: seoulRow)
             case 1:
+                let busanRow = busanSpotListDidStamp[indexPath.row]
+                cell.cellconfigure(row: busanRow)
+            case 2:
                 let gyeongGiDoRow = gyeongGiDoSpotListDidStamp[indexPath.row]
                 cell.cellconfigure(row: gyeongGiDoRow)
+            case 3:
+                let gyeongNamRow = gyeongNamSpotListDidStamp[indexPath.row]
+                cell.cellconfigure(row: gyeongNamRow)
+            case 4:
+                let jejuRow = jejuSpotListDidStamp[indexPath.row]
+                cell.cellconfigure(row: jejuRow)
             default: print("Cell Default")
             }
         }
@@ -71,7 +83,13 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
             case 0:
                 spotData = seoulSpotListDidStamp[indexPath.row]
             case 1:
+                spotData = busanSpotListDidStamp[indexPath.row]
+            case 2:
                 spotData = gyeongGiDoSpotListDidStamp[indexPath.row]
+            case 3:
+                spotData = gyeongNamSpotListDidStamp[indexPath.row]
+            case 4:
+                spotData = jejuSpotListDidStamp[indexPath.row]
             default: print("didSelect Default")
             }
         }
@@ -100,9 +118,21 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
                             seoulRow.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(0...0), with: .automatic)
                         case 1:
+                            let busanRow = self.busanSpotListDidStamp[indexPath.row]
+                            busanRow.setValue(false, forKey: "stampStatus")
+                            tableView.reloadSections(IndexSet(1...1), with: .automatic)
+                        case 2:
                             let gyeongGiDoRow = self.gyeongGiDoSpotListDidStamp[indexPath.row]
                             gyeongGiDoRow.setValue(false, forKey: "stampStatus")
-                            tableView.reloadSections(IndexSet(1...1), with: .automatic)
+                            tableView.reloadSections(IndexSet(2...2), with: .automatic)
+                        case 3:
+                            let gyeongNamRow = self.gyeongNamSpotListDidStamp[indexPath.row]
+                            gyeongNamRow.setValue(false, forKey: "stampStatus")
+                            tableView.reloadSections(IndexSet(3...3), with: .automatic)
+                        case 4:
+                            let jejuRow = self.jejuSpotListDidStamp[indexPath.row]
+                            jejuRow.setValue(false, forKey: "stampStatus")
+                            tableView.reloadSections(IndexSet(4...4), with: .automatic)
                         default: print("trailing Default")
                         }
                     }
@@ -152,7 +182,13 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
                 sectionLabel.text = "서울(\(seoulSpotListDidStamp.count)/255)"
                 headerView.bounds = headerView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
             case 1:
+                sectionLabel.text = "부산(\(busanSpotListDidStamp.count)/119)"
+            case 2:
                 sectionLabel.text = "경기도(\(gyeongGiDoSpotListDidStamp.count)/708)"
+            case 3:
+                sectionLabel.text = "경상남도(\(gyeongNamSpotListDidStamp.count)/729)"
+            case 4:
+                sectionLabel.text = "제주도(\(jejuSpotListDidStamp.count)/279)"
             default: sectionLabel.text = ""
             }
         }

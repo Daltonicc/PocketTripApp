@@ -16,6 +16,8 @@ import SkeletonView
 
 class TravelMapViewController: UIViewController {
 
+    // MARK: - Property
+    
     @IBOutlet weak var travelMapView: MKMapView!
     @IBOutlet weak var userLocationButton: UIButton!
     @IBOutlet weak var mapStampView: UIView!
@@ -32,7 +34,6 @@ class TravelMapViewController: UIViewController {
     var selectedAnnotation: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("contentId == \(contentId)")
     }
-    
     var seoulSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 1")
     }
@@ -45,11 +46,31 @@ class TravelMapViewController: UIViewController {
     var gyeongGiDoSpotListNotDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == false AND areaCode == 31")
     }
+    var busanSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 6")
+    }
+    var busanSpotListNotDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == false AND areaCode == 6")
+    }
+    var gyeongNamSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 36")
+    }
+    var gyeongNamSpotListNotDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == false AND areaCode == 36")
+    }
+    var jejuSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 39")
+    }
+    var jejuSpotListNotDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == false AND areaCode == 39")
+    }
     
     let localRealm = try! Realm()
     let locationManager = CLLocationManager()
     var contentId = 0
     var region = MyRegion.myRegion
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +153,12 @@ class TravelMapViewController: UIViewController {
             seoulAnnotationSetting()
         case "경기도":
             gyeongGiDoAnnotationSetting()
+        case "부산":
+            busanAnnotationSetting()
+        case "경상남도":
+            gyeongNamAnnotationSetting()
+        case "제주도":
+            jejuAnnotationSetting()
         default: print("Default")
         }
     }

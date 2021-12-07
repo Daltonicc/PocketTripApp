@@ -55,6 +55,7 @@
 		6AEEC447275E7529008E8E28 /* BusanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC446275E7529008E8E28 /* BusanData.swift */; };
 		6AEEC449275E7534008E8E28 /* GyeongNamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC448275E7534008E8E28 /* GyeongNamData.swift */; };
 		6AEEC44B275E8532008E8E28 /* Main+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */; };
+		6AEEC44F275F9997008E8E28 /* TravelMap+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC44E275F9997008E8E28 /* TravelMap+Annotation.swift */; };
 		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		6AEEC446275E7529008E8E28 /* BusanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusanData.swift; sourceTree = "<group>"; };
 		6AEEC448275E7534008E8E28 /* GyeongNamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyeongNamData.swift; sourceTree = "<group>"; };
 		6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+SaveData.swift"; sourceTree = "<group>"; };
+		6AEEC44E275F9997008E8E28 /* TravelMap+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMap+Annotation.swift"; sourceTree = "<group>"; };
 		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 				6A950BCA274A6A0E00DDAE25 /* TravelMapViewController.swift */,
 				6A950BE5274D324800DDAE25 /* TravelMap+Extension.swift */,
 				6A950BE7274D527800DDAE25 /* TravelMap+MapView.swift */,
+				6AEEC44E275F9997008E8E28 /* TravelMap+Annotation.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				6AC0C4452757D37300D876BD /* WebViewController.swift in Sources */,
 				6A950BD5274BC30600DDAE25 /* APIManager.swift in Sources */,
 				6A950BD0274BA7A100DDAE25 /* TravelDataStruct.swift in Sources */,
+				6AEEC44F275F9997008E8E28 /* TravelMap+Annotation.swift in Sources */,
 				6A6F15A1275252190076E4FC /* GyeongGiDoData.swift in Sources */,
 				6A950BBB2746AD1500DDAE25 /* MainViewController.swift in Sources */,
 				6A950BA22742C56B00DDAE25 /* AppDelegate.swift in Sources */,

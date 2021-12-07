@@ -10,6 +10,8 @@ import RealmSwift
 
 class MainViewController: UIViewController {
 
+    // MARK: - Property
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var sideMenuBarButton: UIBarButtonItem!
@@ -27,6 +29,15 @@ class MainViewController: UIViewController {
     var gyeongGiDoSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 31")
     }
+    var busanSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 6")
+    }
+    var gyeongNamSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 36")
+    }
+    var jejuSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 39")
+    }
     var region = MyRegion.myRegion
     //여행지 데이터 2차원 배열
     let travelKorea: [[TravelData]] = [seoulTravelSpotData,
@@ -34,6 +45,8 @@ class MainViewController: UIViewController {
     ]
     let travelAreaCode: [Int] = [1, 6, 31, 36, 39]
     let localRealm = try! Realm()
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +59,9 @@ class MainViewController: UIViewController {
         saveSpotData()
         //여행지 딕셔너리
         makeTravelSpotDictionary()
+        
+        
+        backgroundImageView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -161,7 +177,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -185,17 +201,29 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch page {
         case 0:
             titleLabel.text = "한국"
-            percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(963) * 1000) / 10)%"
+            percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(2090) * 1000) / 10)%"
             backgroundImageView.isHidden = true
         case 1:
+            titleLabel.text = "서울"
+            percentLabel.text = "달성률: \(round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10)%"
+            seoulBackgroundConfigure()
+//            backgroundImageView.isHidden = true
+        case 2:
             titleLabel.text = "경기도"
             percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
             gyeongGiDoBackGroundConfigure()
-            backgroundImageView.isHidden = false
-        case 2:
-            titleLabel.text = "서울"
-            percentLabel.text = "달성률: \(round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10)%"
-            seoulGroundConfigure()
+        case 3:
+            titleLabel.text = "부산"
+            percentLabel.text = "달성률: \(round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10)%"
+            busanBackgroundConfigure()
+        case 4:
+            titleLabel.text = "경상남도"
+            percentLabel.text = "달성률: \(round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10)%"
+            gyeongNamBackgroundConfigure()
+        case 5:
+            titleLabel.text = "제주도"
+            percentLabel.text = "달성률: \(round(Double(jejuSpotListDidStamp.count) / Double(279) * 1000) / 10)%"
+            jejuBackgroundConfigure()
         default: print("page Default")
         }
     }

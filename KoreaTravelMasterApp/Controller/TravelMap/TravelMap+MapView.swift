@@ -58,80 +58,10 @@ extension TravelMapViewController: CLLocationManagerDelegate {
                 print("Full Accuracy")
             case .reducedAccuracy:
                 print("Reduce Accuracy")
+                //얼럿 띄워주기 - 정확도가 적으면 퍼즐 획득이 불가능합니다.
             @unknown default:
                 print("Default Accuracy")
             }
-        }
-    }
-
-    //다녀온 곳만 보여줄 때(전체 데이터에서)
-    func doneStampAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<AllSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.doneStamp)
-            annotation.title = AllSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: AllSpotListDidStamp[i].latitude,
-                longitude: AllSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
-    //서울 여행지
-    func seoulAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<seoulSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.seoulDoneStamp)
-            annotation.title = seoulSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: seoulSpotListDidStamp[i].latitude,
-                longitude: seoulSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<seoulSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.seoulNotDoneStamp)
-            annotation.title = seoulSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: seoulSpotListNotDidStamp[i].latitude,
-                longitude: seoulSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
-    //경기도 여행지
-    func gyeongGiDoAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<gyeongGiDoSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeonGiDoDoneStamp)
-            annotation.title = gyeongGiDoSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongGiDoSpotListDidStamp[i].latitude,
-                longitude: gyeongGiDoSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<gyeongGiDoSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeonGiDoNotDoneStamp)
-            annotation.title = gyeongGiDoSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongGiDoSpotListNotDidStamp[i].latitude,
-                longitude: gyeongGiDoSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
         }
     }
     
@@ -151,7 +81,7 @@ extension TravelMapViewController: CLLocationManagerDelegate {
         }
 
         if let annotation = annotationView?.annotation as? MyPointAnnotation {
-
+            //나중에 핀 이미지 지역별 선정할 때 활용!
             switch annotation.obj! {
             case .doneStamp:
                 annotationView?.image = UIImage(named: "doneStampPinImage")
@@ -162,6 +92,18 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             case .gyeonGiDoDoneStamp:
                 annotationView?.image = UIImage(named: "doneStampPinImage")
             case .gyeonGiDoNotDoneStamp:
+                annotationView?.image = UIImage(named: "notDoneStampPinImage")
+            case .busanDoneStamp:
+                annotationView?.image = UIImage(named: "doneStampPinImage")
+            case .busanNotDoneStamp:
+                annotationView?.image = UIImage(named: "notDoneStampPinImage")
+            case .gyeongNamDoneStamp:
+                annotationView?.image = UIImage(named: "doneStampPinImage")
+            case .gyeongNamNotDoneStamp:
+                annotationView?.image = UIImage(named: "notDoneStampPinImage")
+            case .jejuDoneStamp:
+                annotationView?.image = UIImage(named: "doneStampPinImage")
+            case .jejuNotDoneStamp:
                 annotationView?.image = UIImage(named: "notDoneStampPinImage")
             }
         } else {

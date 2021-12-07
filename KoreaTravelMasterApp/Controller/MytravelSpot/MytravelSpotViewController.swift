@@ -21,6 +21,15 @@ class MytravelSpotViewController: UIViewController {
     var gyeongGiDoSpotListDidStamp: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 31").sorted(byKeyPath: "date", ascending: false)
     }
+    var busanSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 6").sorted(byKeyPath: "date", ascending: false)
+    }
+    var gyeongNamSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 36").sorted(byKeyPath: "date", ascending: false)
+    }
+    var jejuSpotListDidStamp: Results<MytravelSpotObject>! {
+        localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true AND areaCode == 39").sorted(byKeyPath: "date", ascending: false)
+    }
     var searchFilterSpotList: Results<MytravelSpotObject>!
     var isFiltering: Bool {
         let searchController = navigationItem.searchController

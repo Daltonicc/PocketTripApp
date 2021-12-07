@@ -78,7 +78,7 @@ extension TravelMapViewController {
     }
     
     func doNotHaveStampAlertConfigure() -> Void {
-        let alert = UIAlertController(title: "다녀온 곳이 없습니다!", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "퍼즐을 획득한 곳이 없습니다!", message: nil, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { _ in
             self.mapStampView.isHidden = true
         }
@@ -108,16 +108,31 @@ extension TravelMapViewController {
             self.seoulAnnotationSetting()
             self.region = "서울"
         }
+        let busan = UIAlertAction(title: "부산", style: .default) { _ in
+            self.busanAnnotationSetting()
+            self.region = "부산"
+        }
         let gyeongGiDO = UIAlertAction(title: "경기도", style: .default) { _ in
             self.gyeongGiDoAnnotationSetting()
             self.region = "경기도"
+        }
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
+            self.gyeongNamAnnotationSetting()
+            self.region = "경상남도"
+        }
+        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
+            self.jejuAnnotationSetting()
+            self.region = "제주도"
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         cancel.setValue(UIColor.red, forKey: "titleTextColor")
         
         alert.addAction(alreadyGet)
         alert.addAction(seoul)
+        alert.addAction(busan)
         alert.addAction(gyeongGiDO)
+        alert.addAction(gyeongNam)
+        alert.addAction(jeju)
         alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)

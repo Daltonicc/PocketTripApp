@@ -59,7 +59,6 @@ class AllTravelSpotViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = .black
         navigationItem.rightBarButtonItem = filterBarButton
         navigationItem.rightBarButtonItem?.tintColor = .black
-        
     }
     
     @objc func backButtonAction() {
@@ -75,9 +74,20 @@ class AllTravelSpotViewController: UIViewController {
             self.areaCode = 1
             self.allSpotTableView.reloadData()
         }
-        
+        let busan = UIAlertAction(title: "부산", style: .default) { _ in
+            self.areaCode = 6
+            self.allSpotTableView.reloadData()
+        }
         let gyeongGido = UIAlertAction(title: "경기도", style: .default) { _ in
             self.areaCode = 31
+            self.allSpotTableView.reloadData()
+        }
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
+            self.areaCode = 36
+            self.allSpotTableView.reloadData()
+        }
+        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
+            self.areaCode = 39
             self.allSpotTableView.reloadData()
         }
 
@@ -85,7 +95,10 @@ class AllTravelSpotViewController: UIViewController {
         cancel.setValue(UIColor.red, forKey: "titleTextColor")
         
         alert.addAction(seoul)
+        alert.addAction(busan)
         alert.addAction(gyeongGido)
+        alert.addAction(gyeongNam)
+        alert.addAction(jeju)
         alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)

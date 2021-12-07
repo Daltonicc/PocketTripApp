@@ -85,7 +85,10 @@ extension AllTravelSpotViewController: UITableViewDelegate, UITableViewDataSourc
         } else {
             switch areaCode {
             case 1: sectionLabel.text = "서울"
+            case 6: sectionLabel.text = "부산"
             case 31: sectionLabel.text = "경기도"
+            case 36: sectionLabel.text = "경상남도"
+            case 39: sectionLabel.text = "제주도"
             default: sectionLabel.text = ""
             }
         }

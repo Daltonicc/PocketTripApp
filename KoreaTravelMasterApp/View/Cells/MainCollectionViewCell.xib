@@ -20,7 +20,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KoreaForMain" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-Vn-c5h">
                         <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0271" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-e1-v9J">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongGiDoForMain(o)" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-e1-v9J">
                         <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GangWonDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-pv-hOy">
@@ -41,10 +41,10 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongBukForMain" translatesAutoresizingMaskIntoConstraints="NO" id="dZf-6O-XW6">
                         <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0272" translatesAutoresizingMaskIntoConstraints="NO" id="Pmy-uV-aYS">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GyeongNamForMain(o)" translatesAutoresizingMaskIntoConstraints="NO" id="Pmy-uV-aYS">
                         <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0273" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-4l-Dlf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JejuDoForMain(o)" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-4l-Dlf">
                         <rect key="frame" x="0.0" y="0.0" width="421" height="522"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DokDoForMain" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-0I-7Gj">
@@ -122,9 +122,9 @@
         <image name="DokDoForMain" width="2048" height="2048"/>
         <image name="GangWonDoForMain" width="2048" height="2048"/>
         <image name="GyeongBukForMain" width="2048" height="2048"/>
-        <image name="IMG_0271" width="2048" height="2048"/>
-        <image name="IMG_0272" width="2048" height="2048"/>
-        <image name="IMG_0273" width="2048" height="2048"/>
+        <image name="GyeongGiDoForMain(o)" width="2048" height="2048"/>
+        <image name="GyeongNamForMain(o)" width="2048" height="2048"/>
+        <image name="JejuDoForMain(o)" width="2048" height="2048"/>
         <image name="JonBukForMain" width="2048" height="2048"/>
         <image name="JonNamForMain" width="2048" height="2048"/>
         <image name="KoreaForMain" width="2048" height="2048"/>
