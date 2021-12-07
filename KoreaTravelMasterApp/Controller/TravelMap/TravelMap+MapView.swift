@@ -240,7 +240,7 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             //조건문으로 거리 100미터 이하일 때만 버튼 누를 수 있게 처리
             print(distanceFromUserLocation)
             // 테스트용. 거리 10만으로 지정. 나중에 100으로 바꾸자
-            if distanceFromUserLocation > 10000 {
+            if distanceFromUserLocation > 100 {
                 collectButton.isEnabled = false
                 cautionButton.isHidden = false
             } else {

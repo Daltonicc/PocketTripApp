@@ -13,3 +13,11 @@ struct TravelData {
     var latitude: Double
     var longitude: Double
 }
+
+struct AreaCode {
+    let seoul = 1
+    let gyeongGiDo = 31
+    let busan = 6
+    let gyeongNam = 36
+    let jeju = 39
+}

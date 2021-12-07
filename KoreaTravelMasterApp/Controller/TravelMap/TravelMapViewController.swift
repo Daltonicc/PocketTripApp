@@ -53,7 +53,7 @@ class TravelMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         travelMapView.delegate = self
         locationManager.delegate = self
         myTravelSpotList = localRealm.objects(MytravelSpotObject.self)

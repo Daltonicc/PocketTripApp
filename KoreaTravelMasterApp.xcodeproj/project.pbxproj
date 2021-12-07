@@ -40,7 +40,7 @@
 		6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BEF274E144200DDAE25 /* RealmSwift */; };
 		6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */; };
 		6AC0C4122754177100D876BD /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C4112754177100D876BD /* Zip */; };
-		6AC0C4152754FBA500D876BD /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */; };
+		6AC0C4152754FBA500D876BD /* Main+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* Main+Extension.swift */; };
 		6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */; };
 		6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */; };
 		6AC0C41C27550A3D00D876BD /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */; };
@@ -51,6 +51,10 @@
 		6AEEC3EC275A42BA008E8E28 /* AwardsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEC3EA275A42BA008E8E28 /* AwardsCollectionViewCell.xib */; };
 		6AEEC3EF275A4311008E8E28 /* Awards+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC3EE275A4311008E8E28 /* Awards+CollectionView.swift */; };
 		6AEEC3F1275A4EEF008E8E28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC3F0275A4EEF008E8E28 /* Constant.swift */; };
+		6AEEC445275E7521008E8E28 /* JejuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC444275E7521008E8E28 /* JejuData.swift */; };
+		6AEEC447275E7529008E8E28 /* BusanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC446275E7529008E8E28 /* BusanData.swift */; };
+		6AEEC449275E7534008E8E28 /* GyeongNamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC448275E7534008E8E28 /* GyeongNamData.swift */; };
+		6AEEC44B275E8532008E8E28 /* Main+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */; };
 		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +88,7 @@
 		6A950BE7274D527800DDAE25 /* TravelMap+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMap+MapView.swift"; sourceTree = "<group>"; };
 		6A950BEA274E13D200DDAE25 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
-		6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
+		6AC0C4142754FBA500D876BD /* Main+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+Extension.swift"; sourceTree = "<group>"; };
 		6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
 		6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
 		6AC0C41927550A3D00D876BD /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
@@ -95,6 +99,10 @@
 		6AEEC3EE275A4311008E8E28 /* Awards+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Awards+CollectionView.swift"; sourceTree = "<group>"; };
 		6AEEC3F0275A4EEF008E8E28 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6AEEC3F5275C0647008E8E28 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		6AEEC444275E7521008E8E28 /* JejuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuData.swift; sourceTree = "<group>"; };
+		6AEEC446275E7529008E8E28 /* BusanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusanData.swift; sourceTree = "<group>"; };
+		6AEEC448275E7534008E8E28 /* GyeongNamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyeongNamData.swift; sourceTree = "<group>"; };
+		6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+SaveData.swift"; sourceTree = "<group>"; };
 		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +187,9 @@
 				6A950BCF274BA7A100DDAE25 /* TravelDataStruct.swift */,
 				6A950BCD274A765C00DDAE25 /* SeoulData.swift */,
 				6A6F15A0275252190076E4FC /* GyeongGiDoData.swift */,
+				6AEEC444275E7521008E8E28 /* JejuData.swift */,
+				6AEEC446275E7529008E8E28 /* BusanData.swift */,
+				6AEEC448275E7534008E8E28 /* GyeongNamData.swift */,
 			);
 			path = TravelSpotData;
 			sourceTree = "<group>";
@@ -223,7 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				6A950BBA2746AD1500DDAE25 /* MainViewController.swift */,
-				6AC0C4142754FBA500D876BD /* MainViewController+Extension.swift */,
+				6AC0C4142754FBA500D876BD /* Main+Extension.swift */,
+				6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -405,6 +417,7 @@
 				6AEEC3EB275A42BA008E8E28 /* AwardsCollectionViewCell.swift in Sources */,
 				6A6F159727514B860076E4FC /* TravelSpotDetailViewController.swift in Sources */,
 				6A6F1591274FBD3F0076E4FC /* MytravelSpot+TabelView.swift in Sources */,
+				6AEEC44B275E8532008E8E28 /* Main+SaveData.swift in Sources */,
 				6A6F159527512F6D0076E4FC /* CustomAnnotation.swift in Sources */,
 				6A950BC02748CECD00DDAE25 /* MainCollectionViewCell.swift in Sources */,
 				6A950BCB274A6A0E00DDAE25 /* TravelMapViewController.swift in Sources */,
@@ -413,13 +426,16 @@
 				6A950BE0274CBD6300DDAE25 /* WelcomeViewController.swift in Sources */,
 				6A950BCE274A765C00DDAE25 /* SeoulData.swift in Sources */,
 				6A950BA42742C56B00DDAE25 /* SceneDelegate.swift in Sources */,
+				6AEEC449275E7534008E8E28 /* GyeongNamData.swift in Sources */,
 				6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */,
+				6AEEC445275E7521008E8E28 /* JejuData.swift in Sources */,
 				6AC0C4202755454200D876BD /* MyRegion.swift in Sources */,
 				6A6F159C2752440E0076E4FC /* AllTravelSpotTableViewCell.swift in Sources */,
 				6A6F1593274FBE180076E4FC /* MytravelSpotTabelViewCell.swift in Sources */,
 				6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */,
 				6A950BEB274E13D200DDAE25 /* RealmModel.swift in Sources */,
-				6AC0C4152754FBA500D876BD /* MainViewController+Extension.swift in Sources */,
+				6AC0C4152754FBA500D876BD /* Main+Extension.swift in Sources */,
+				6AEEC447275E7529008E8E28 /* BusanData.swift in Sources */,
 				6AEEC3EF275A4311008E8E28 /* Awards+CollectionView.swift in Sources */,
 				6A950BE8274D527800DDAE25 /* TravelMap+MapView.swift in Sources */,
 			);
