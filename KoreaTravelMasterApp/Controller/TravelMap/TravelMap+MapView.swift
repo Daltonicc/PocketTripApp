@@ -115,6 +115,8 @@ extension TravelMapViewController: CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         //스크롤 맨 위로 초기화
         overViewTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
+        detailImageView.image = UIImage(named: "defaultImage")
+
         if let selectAnnotation = view.annotation as? MKPointAnnotation {
             contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
             // 디비에 데이터 없을 때 API 통신

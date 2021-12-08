@@ -63,8 +63,23 @@ class SettingViewController: UIViewController {
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
             self.regionLabel.text = MyRegion.myRegion
         }
+        let busan = UIAlertAction(title: "부산", style: .default) { _ in
+            MyRegion.myRegion = "부산"
+            UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
+            self.regionLabel.text = MyRegion.myRegion
+        }
         let gyeongGiDo = UIAlertAction(title: "경기도", style: .default) { _ in
             MyRegion.myRegion = "경기도"
+            UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
+            self.regionLabel.text = MyRegion.myRegion
+        }
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
+            MyRegion.myRegion = "경상남도"
+            UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
+            self.regionLabel.text = MyRegion.myRegion
+        }
+        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
+            MyRegion.myRegion = "제주도"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
             self.regionLabel.text = MyRegion.myRegion
         }
@@ -72,7 +87,10 @@ class SettingViewController: UIViewController {
         cancel.setValue(UIColor.red, forKey: "titleTextColor")
 
         alert.addAction(seoul)
+        alert.addAction(busan)
         alert.addAction(gyeongGiDo)
+        alert.addAction(gyeongNam)
+        alert.addAction(jeju)
         alert.addAction(cancel)
         
         self.present(alert, animated: true, completion: nil)

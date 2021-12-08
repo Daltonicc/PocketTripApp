@@ -59,10 +59,10 @@ class MainCollectionViewCell: UICollectionViewCell {
             seoulConfigure()
             regionHidden()
         case 2:
-            gyeongGiDoConfigure()
+            BusanConfigure()
             regionHidden()
         case 3:
-            BusanConfigure()
+            gyeongGiDoConfigure()
             regionHidden()
         case 4:
             GyeongNamConfigure()
@@ -107,19 +107,19 @@ class MainCollectionViewCell: UICollectionViewCell {
         mainImageView.image = UIImage(named: "KoreaForMain")
         //경기도
         if gyeongGiDoSpotListDidStamp.count == 708 {
-            gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain(o)")
+            gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain100")
         } else {
             gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain")
         }
         //경상남도
         if gyeongNamSpotListDidStamp.count == 729 {
-            gyeongNamImageView.image = UIImage(named: "GyeongNamForMain(o)")
+            gyeongNamImageView.image = UIImage(named: "GyeongNamForMain100")
         } else {
             gyeongNamImageView.image = UIImage(named: "GyeongNamForMain")
         }
         //제주도
         if jejuSpotListDidStamp.count == 279 {
-            jejuDoImageView.image = UIImage(named: "JejuDoForMain(o)")
+            jejuDoImageView.image = UIImage(named: "JejuDoForMain100")
         } else {
             jejuDoImageView.image = UIImage(named: "JejuDoForMain")
         }

@@ -209,13 +209,13 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             seoulBackgroundConfigure()
 //            backgroundImageView.isHidden = true
         case 2:
-            titleLabel.text = "경기도"
-            percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
-            gyeongGiDoBackGroundConfigure()
-        case 3:
             titleLabel.text = "부산"
             percentLabel.text = "달성률: \(round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10)%"
             busanBackgroundConfigure()
+        case 3:
+            titleLabel.text = "경기도"
+            percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
+            gyeongGiDoBackGroundConfigure()
         case 4:
             titleLabel.text = "경상남도"
             percentLabel.text = "달성률: \(round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10)%"
