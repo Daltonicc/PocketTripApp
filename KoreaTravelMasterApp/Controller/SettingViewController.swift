@@ -137,6 +137,17 @@ class SettingViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func openSourceButtonClicked(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        
+        vc.url = "https://maze-mozzarella-6e5.notion.site/f2f67f06361048ef8c3dce4a520872c2"
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func askButtonClicked(_ sender: UIButton) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)

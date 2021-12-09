@@ -84,7 +84,7 @@ class MainViewController: UIViewController {
         titleLabel.text = "한국"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
         
-        percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(963) * 1000) / 10)%"
+        percentLabel.text = "달성률: \(round(Double(mytravelSpotList.count) / Double(2090) * 1000) / 10)%"
         percentLabel.font = UIFont.systemFont(ofSize: 18)
         
         logoButton.titleLabel?.font = UIFont(name: "OTSBAggroB", size: 20)
@@ -226,6 +226,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             jejuBackgroundConfigure()
         default: print("page Default")
         }
+//        percentLabel.text = "달성률: 100.0%"
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -268,8 +269,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
  앱 스크린샷 구현
  사용자의 위치를 추적하기 위해서 권한이 필요합니다.
  
- 오늘 구현한 거(11.30)
- 1. 나의 여행지뷰 딜리트기능 추가
- 2. 디버깅
+ 오늘 구현한 거
  
  */

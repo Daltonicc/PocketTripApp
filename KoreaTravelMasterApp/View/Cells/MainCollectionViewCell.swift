@@ -123,6 +123,9 @@ class MainCollectionViewCell: UICollectionViewCell {
         } else {
             jejuDoImageView.image = UIImage(named: "JejuDoForMain")
         }
+//        gyeongGiDoImageView.image = UIImage(named: "GyeongGiDoForMain100")
+//        gyeongNamImageView.image = UIImage(named: "GyeongNamForMain100")
+//        jejuDoImageView.image = UIImage(named: "JejuDoForMain100")
     }
     
     func seoulConfigure() {
@@ -143,6 +146,7 @@ class MainCollectionViewCell: UICollectionViewCell {
                 
         default: mainImageView.image = UIImage(named: "Seoul0percent")
         }
+//        mainImageView.image = UIImage(named: "Seoul100percent")
     }
     
     func gyeongGiDoConfigure() {
@@ -163,6 +167,7 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         default: mainImageView.image = UIImage(named: "GyeongGiDo0percent")
         }
+//        mainImageView.image = UIImage(named: "GyeongGiDo100percent")
     }
     
     func BusanConfigure() {
@@ -183,6 +188,7 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         default: mainImageView.image = UIImage(named: "Busan0percent")
         }
+//        mainImageView.image = UIImage(named: "Busan100percent")
     }
     
     func GyeongNamConfigure() {
@@ -203,6 +209,7 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         default: mainImageView.image = UIImage(named: "GyeongNam0percent")
         }
+//        mainImageView.image = UIImage(named: "GyeongNam100percent")
     }
     
     func JejuConfigure() {
@@ -223,6 +230,7 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         default: mainImageView.image = UIImage(named: "Jeju0percent")
         }
+//        mainImageView.image = UIImage(named: "Jeju100percent")
     }
     
 }

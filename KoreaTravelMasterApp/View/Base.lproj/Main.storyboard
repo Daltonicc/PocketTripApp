@@ -391,10 +391,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-Oz-WXm">
-                                <rect key="frame" x="20" y="287" width="63" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1B-1E-2Jt">
+                                <rect key="frame" x="20" y="287" width="130" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="F3P-ib-qDJ"/>
+                                    <constraint firstAttribute="height" constant="39" id="Cft-PN-fjI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="오픈소스 라이선스">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSourceButtonClicked:" destination="d6t-PJ-kZI" eventType="touchUpInside" id="Vgg-HU-dWn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-Oz-WXm">
+                                <rect key="frame" x="20" y="334" width="63" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="jFT-DU-mvc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -413,14 +427,16 @@
                             <constraint firstItem="8Fu-jU-mbf" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="9pr-5g-Mow"/>
                             <constraint firstItem="sRQ-1r-JBO" firstAttribute="top" secondItem="0pe-aj-q8U" secondAttribute="bottom" constant="8" symbolic="YES" id="FGK-G2-Jmb"/>
                             <constraint firstItem="sRQ-1r-JBO" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="RTP-30-9UI"/>
-                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="SYm-5M-gQd"/>
+                            <constraint firstItem="O1B-1E-2Jt" firstAttribute="top" secondItem="Pbb-x8-x7b" secondAttribute="bottom" constant="8" symbolic="YES" id="UWw-5Z-Hyq"/>
+                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="top" secondItem="O1B-1E-2Jt" secondAttribute="bottom" constant="8" symbolic="YES" id="axr-LP-cjX"/>
                             <constraint firstItem="0pe-aj-q8U" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="bhE-LQ-XZi"/>
                             <constraint firstItem="IDu-VY-tmE" firstAttribute="top" secondItem="RKA-SU-MUM" secondAttribute="top" constant="23" id="c11-uT-a8o"/>
                             <constraint firstItem="8Fu-jU-mbf" firstAttribute="top" secondItem="RKA-SU-MUM" secondAttribute="top" constant="23" id="fXN-Ny-GES"/>
+                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="fdY-xi-nJ3"/>
                             <constraint firstItem="Pbb-x8-x7b" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="jgq-eb-clf"/>
                             <constraint firstItem="Pbb-x8-x7b" firstAttribute="top" secondItem="sRQ-1r-JBO" secondAttribute="bottom" constant="40" id="oKD-hu-a2l"/>
                             <constraint firstItem="RKA-SU-MUM" firstAttribute="trailing" secondItem="IDu-VY-tmE" secondAttribute="trailing" constant="25" id="rlZ-N8-Thn"/>
-                            <constraint firstItem="RjX-Oz-WXm" firstAttribute="top" secondItem="Pbb-x8-x7b" secondAttribute="bottom" constant="8" symbolic="YES" id="w53-bG-hgo"/>
+                            <constraint firstItem="O1B-1E-2Jt" firstAttribute="leading" secondItem="RKA-SU-MUM" secondAttribute="leading" constant="20" id="spj-LY-grH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -429,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cA-Fq-wJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2432" y="-1212"/>
+            <point key="canvasLocation" x="2305" y="-1219"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Dbt-rS-t9V">
