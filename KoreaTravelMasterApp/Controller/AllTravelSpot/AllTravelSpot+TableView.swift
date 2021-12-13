@@ -32,7 +32,6 @@ extension AllTravelSpotViewController: UITableViewDelegate, UITableViewDataSourc
             let row = filterTravelSpotList[indexPath.row]
             cell.cellConfigure(row: row)
         }
-        
         return cell
     }
     

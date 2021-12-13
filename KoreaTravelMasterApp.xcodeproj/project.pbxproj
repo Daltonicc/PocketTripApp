@@ -39,6 +39,7 @@
 		6A950BEE274E144200DDAE25 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BED274E144200DDAE25 /* Realm */; };
 		6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BEF274E144200DDAE25 /* RealmSwift */; };
 		6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */; };
+		6A9F6EAB27626A0300D5D521 /* libswift_Concurrency.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AC0C4122754177100D876BD /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C4112754177100D876BD /* Zip */; };
 		6AC0C4152754FBA500D876BD /* Main+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* Main+Extension.swift */; };
 		6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */; };
@@ -89,6 +90,7 @@
 		6A950BE7274D527800DDAE25 /* TravelMap+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMap+MapView.swift"; sourceTree = "<group>"; };
 		6A950BEA274E13D200DDAE25 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
+		6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		6AC0C4142754FBA500D876BD /* Main+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+Extension.swift"; sourceTree = "<group>"; };
 		6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
 		6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A9F6EAB27626A0300D5D521 /* libswift_Concurrency.tbd in Frameworks */,
 				6AC0C4122754177100D876BD /* Zip in Frameworks */,
 				6AC0C443275690E700D876BD /* SkeletonView in Frameworks */,
 				6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */,
@@ -159,6 +162,7 @@
 			children = (
 				6A950BA02742C56B00DDAE25 /* KoreaTravelMasterApp */,
 				6A950B9F2742C56B00DDAE25 /* Products */,
+				6A9F6EA927626A0300D5D521 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +235,14 @@
 				6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		6A9F6EA927626A0300D5D521 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6AC0C4132754FB8700D876BD /* Main */ = {
@@ -591,7 +603,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
@@ -609,6 +621,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
@@ -642,6 +658,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;

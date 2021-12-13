@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import RealmSwift
 
 extension MainViewController {
     
@@ -29,98 +30,23 @@ extension MainViewController {
         }
     }
     
-    func seoulBackgroundConfigure() {
+    //함수 수정 백그라운드 컨피규어 통일
+    func BackgroundConfigure(spotListDidStamp: Results<MytravelSpotObject>, AllspotCount: Int, puzzleImage: String) {
         
-        let seoulPercent = round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10
+        let Percent = round(Double(spotListDidStamp.count) / Double(AllspotCount) * 1000) / 10
         
-        switch seoulPercent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        case 10...29.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle25")
-        case 30...59.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle50")
-        case 60...99.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
+        switch Percent {
+        case 0...9.99:  backgroundImageView.image = UIImage(named: "\(puzzleImage)0")
+        case 10...29.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)25")
+        case 30...59.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)50")
+        case 60...99.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)75")
         case 100:
-            if seoulSpotListDidStamp.count == 255 {
+            if spotListDidStamp.count == AllspotCount {
                 backgroundImageView.isHidden = true
             } else {
-                backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
+                backgroundImageView.image = UIImage(named: "\(puzzleImage)75")
             }
-        default: backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        }
-    }
-    
-    func gyeongGiDoBackGroundConfigure() {
-        
-        let gyeongGiDoPercent = round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10
-        
-        switch gyeongGiDoPercent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle0")
-        case 10...29.99: backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle25")
-        case 30...59.99: backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle50")
-        case 60...99.99: backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle75")
-        case 100:
-            if gyeongGiDoSpotListDidStamp.count == 708 {
-                backgroundImageView.isHidden = true
-            } else {
-                backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle75")
-            }
-        default: backgroundImageView.image = UIImage(named: "GyeongGiDoPuzzle0")
-        }
-    }
-    
-    func busanBackgroundConfigure() {
-        
-        let seoulPercent = round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10
-        
-        switch seoulPercent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        case 10...29.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle25")
-        case 30...59.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle50")
-        case 60...99.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-        case 100:
-            if busanSpotListDidStamp.count == 119 {
-                backgroundImageView.isHidden = true
-            } else {
-                backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-            }
-        default: backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        }
-    }
-    
-    func gyeongNamBackgroundConfigure() {
-        
-        let seoulPercent = round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10
-        
-        switch seoulPercent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        case 10...29.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle25")
-        case 30...59.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle50")
-        case 60...99.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-        case 100:
-            if gyeongNamSpotListDidStamp.count == 729 {
-                backgroundImageView.isHidden = true
-            } else {
-                backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-            }
-        default: backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        }
-    }
-    
-    func jejuBackgroundConfigure() {
-        
-        let seoulPercent = round(Double(jejuSpotListDidStamp.count) / Double(279) * 1000) / 10
-        
-        switch seoulPercent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
-        case 10...29.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle25")
-        case 30...59.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle50")
-        case 60...99.99: backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-        case 100:
-            if jejuSpotListDidStamp.count == 279 {
-                backgroundImageView.isHidden = true
-            } else {
-                backgroundImageView.image = UIImage(named: "SeoulPuzzle75")
-            }
-        default: backgroundImageView.image = UIImage(named: "SeoulPuzzle0")
+        default: backgroundImageView.image = UIImage(named: "\(puzzleImage)0")
         }
     }
 }

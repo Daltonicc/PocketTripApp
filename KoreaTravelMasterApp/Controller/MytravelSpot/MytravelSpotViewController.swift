@@ -48,7 +48,6 @@ class MytravelSpotViewController: UIViewController {
         myTravelSpotTableView.reloadData()
         
         navigationItemConfigure()
-        
     }
     
     // MARK: - Method

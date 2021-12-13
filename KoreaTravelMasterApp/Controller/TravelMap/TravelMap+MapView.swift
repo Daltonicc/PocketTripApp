@@ -212,7 +212,6 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             travelMapView.setRegion(region, animated: true)
             
             locationManager.stopUpdatingLocation()
-            
         } else {
             print("Location Cannot Find")
         }
@@ -240,13 +239,5 @@ extension TravelMapViewController: MKMapViewDelegate {
     
 }
 
-/*
- 대응해줘야 할 필터 경우의 수
- 
- 1. 다녀온 곳만
- 2. 서울
- 3. 경기도
- 
- */
 
 

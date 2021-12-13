@@ -206,24 +206,25 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 1:
             titleLabel.text = "서울"
             percentLabel.text = "달성률: \(round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10)%"
-            seoulBackgroundConfigure()
+//            seoulBackgroundConfigure()
+            BackgroundConfigure(spotListDidStamp: seoulSpotListDidStamp, AllspotCount: 255, puzzleImage: "SeoulPuzzle")
 //            backgroundImageView.isHidden = true
         case 2:
             titleLabel.text = "부산"
             percentLabel.text = "달성률: \(round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10)%"
-            busanBackgroundConfigure()
+//            busanBackgroundConfigure()
         case 3:
             titleLabel.text = "경기도"
             percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
-            gyeongGiDoBackGroundConfigure()
+//            gyeongGiDoBackGroundConfigure()
         case 4:
             titleLabel.text = "경상남도"
             percentLabel.text = "달성률: \(round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10)%"
-            gyeongNamBackgroundConfigure()
+//            gyeongNamBackgroundConfigure()
         case 5:
             titleLabel.text = "제주도"
             percentLabel.text = "달성률: \(round(Double(jejuSpotListDidStamp.count) / Double(279) * 1000) / 10)%"
-            jejuBackgroundConfigure()
+//            jejuBackgroundConfigure()
         default: print("page Default")
         }
 //        percentLabel.text = "달성률: 100.0%"

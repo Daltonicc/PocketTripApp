@@ -114,7 +114,4 @@ extension AllTravelSpotViewController: UISearchResultsUpdating {
         
         allSpotTableView.reloadData()
     }
-    
-    
-    
 }
