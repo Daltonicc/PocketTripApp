@@ -40,7 +40,7 @@
 		6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BEF274E144200DDAE25 /* RealmSwift */; };
 		6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */; };
 		6A9F6EAB27626A0300D5D521 /* libswift_Concurrency.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		6A9F6EFC2767C4C800D5D521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9F6EFB2767C4C800D5D521 /* GoogleService-Info.plist */; };
+		6A9F6F0927683EDB00D5D521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */; };
 		6AC0C4122754177100D876BD /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C4112754177100D876BD /* Zip */; };
 		6AC0C4152754FBA500D876BD /* Main+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* Main+Extension.swift */; };
 		6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */; };
@@ -94,7 +94,7 @@
 		6A950BEA274E13D200DDAE25 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
-		6A9F6EFB2767C4C800D5D521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AC0C4142754FBA500D876BD /* Main+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+Extension.swift"; sourceTree = "<group>"; };
 		6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
 		6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				6AFD4AB22752C49D00B971B0 /* Controller */,
 				6AC0C41627550A2600D876BD /* Font */,
 				6A950BAF2742C56C00DDAE25 /* Info.plist */,
-				6A9F6EFB2767C4C800D5D521 /* GoogleService-Info.plist */,
+				6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */,
 			);
 			path = KoreaTravelMasterApp;
 			sourceTree = "<group>";
@@ -352,12 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A950BB22742C56C00DDAE25 /* Build configuration list for PBXNativeTarget "KoreaTravelMasterApp" */;
 			buildPhases = (
-				4305AD935C7C04A2D09197E2 /* [CP] Check Pods Manifest.lock */,
 				6A950B9A2742C56B00DDAE25 /* Sources */,
+				4305AD935C7C04A2D09197E2 /* [CP] Check Pods Manifest.lock */,
 				6A950B9B2742C56B00DDAE25 /* Frameworks */,
 				6A950B9C2742C56B00DDAE25 /* Resources */,
 				681607F1EB6638F7DABCDCAF /* [CP] Embed Pods Frameworks */,
-				6A9F6EFF2767CA8200D5D521 /* ShellScript */,
+				6A9F6F0A27683F2800D5D521 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -424,10 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A950BAE2742C56C00DDAE25 /* LaunchScreen.storyboard in Resources */,
+				6A9F6F0927683EDB00D5D521 /* GoogleService-Info.plist in Resources */,
 				6A950BAB2742C56C00DDAE25 /* Assets.xcassets in Resources */,
 				6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */,
 				6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */,
-				6A9F6EFC2767C4C800D5D521 /* GoogleService-Info.plist in Resources */,
 				6A950BA92742C56B00DDAE25 /* Main.storyboard in Resources */,
 				6AC0C41C27550A3D00D876BD /* SB 어그로OTF L.otf in Resources */,
 				6AEEC3EC275A42BA008E8E28 /* AwardsCollectionViewCell.xib in Resources */,
@@ -477,7 +477,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6A9F6EFF2767CA8200D5D521 /* ShellScript */ = {
+		6A9F6F0A27683F2800D5D521 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
