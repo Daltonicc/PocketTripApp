@@ -2,6 +2,7 @@
 
 ### [기획안](https://maze-mozzarella-6e5.notion.site/c4afe84b8d084560a152ad8b480c2fa3)
 ### [개발공수](https://maze-mozzarella-6e5.notion.site/8ead788b3ea940b0a4cb1aade1a17555)
+### [총 정리](https://maze-mozzarella-6e5.notion.site/PocketTrip-67dfb21bd1a840c4810eb8f2d2077a35)
 
 ## 팀빌딩 및 개인 진행 상황
 ### [이터레이션1](https://maze-mozzarella-6e5.notion.site/1-11-15-11-17-01646bdf477f421e8dbec571acd17671)
