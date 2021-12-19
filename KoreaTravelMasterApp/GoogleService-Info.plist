@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>340449600523-ep082kkmqhqob35b7iek2p4h7intsqmp.apps.googleusercontent.com</string>
+	<string>1055245686851-rqqgoe3raoffcsev5il455mjfbj4gcv1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.340449600523-ep082kkmqhqob35b7iek2p4h7intsqmp</string>
+	<string>com.googleusercontent.apps.1055245686851-rqqgoe3raoffcsev5il455mjfbj4gcv1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDFApjSZm17PAVl8m87EfMr-aGYKPgMYS8</string>
+	<string>AIzaSyDcVciUSwMl_RlcgNB3R2W3EnbpsMjuAV0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>340449600523</string>
+	<string>1055245686851</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ethan.KoreaTravelMasterApp</string>
 	<key>PROJECT_ID</key>
-	<string>pockettrip-62799</string>
+	<string>realpockettrip</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pockettrip-62799.appspot.com</string>
+	<string>realpockettrip.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:340449600523:ios:5c7cadd1595918f9cbd30e</string>
+	<string>1:1055245686851:ios:c9991e4a066dd6037d5cf6</string>
 </dict>
 </plist>

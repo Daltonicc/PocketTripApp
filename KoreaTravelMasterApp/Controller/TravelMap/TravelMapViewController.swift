@@ -87,13 +87,11 @@ class TravelMapViewController: UIViewController {
         locationButtonSetting()
         
         regionAnnotationSwitch()
-        print(#function)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(#function)
     }
     
     // MARK: - Method
@@ -150,15 +148,40 @@ class TravelMapViewController: UIViewController {
         
         switch region {
         case "서울":
-            seoulAnnotationSetting()
+            annotationSetting(
+                didSpotList: self.seoulSpotListDidStamp,
+                notDidSpotList: self.seoulSpotListNotDidStamp,
+                stampRegion: ComparableData.seoulDoneStamp,
+                notStampRegion: ComparableData.seoulNotDoneStamp
+            )
         case "경기도":
-            gyeongGiDoAnnotationSetting()
+            annotationSetting(
+                didSpotList: self.gyeongGiDoSpotListDidStamp,
+                notDidSpotList: self.gyeongGiDoSpotListNotDidStamp,
+                stampRegion: ComparableData.gyeonGiDoDoneStamp,
+                notStampRegion: ComparableData.gyeonGiDoNotDoneStamp
+            )
         case "부산":
-            busanAnnotationSetting()
+            annotationSetting(
+                didSpotList: self.busanSpotListDidStamp,
+                notDidSpotList: self.busanSpotListNotDidStamp,
+                stampRegion: ComparableData.busanDoneStamp,
+                notStampRegion: ComparableData.busanNotDoneStamp
+            )
         case "경상남도":
-            gyeongNamAnnotationSetting()
+            annotationSetting(
+                didSpotList: self.gyeongNamSpotListDidStamp,
+                notDidSpotList: self.gyeongNamSpotListNotDidStamp,
+                stampRegion: ComparableData.gyeongNamDoneStamp,
+                notStampRegion: ComparableData.gyeongNamNotDoneStamp
+            )
         case "제주도":
-            jejuAnnotationSetting()
+            annotationSetting(
+                didSpotList: self.jejuSpotListDidStamp,
+                notDidSpotList: self.jejuSpotListNotDidStamp,
+                stampRegion: ComparableData.jejuDoneStamp,
+                notStampRegion: ComparableData.jejuNotDoneStamp
+            )
         default: print("Default")
         }
     }

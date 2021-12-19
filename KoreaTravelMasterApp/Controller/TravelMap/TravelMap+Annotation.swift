@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import RealmSwift
 
 extension TravelMapViewController {
     
@@ -27,139 +28,29 @@ extension TravelMapViewController {
         }
     }
     
-    //서울 여행지
-    func seoulAnnotationSetting() {
-        
+    //어노테이션 함수 통일
+    func annotationSetting(didSpotList: Results<MytravelSpotObject>!, notDidSpotList: Results<MytravelSpotObject>!, stampRegion: ComparableData, notStampRegion: ComparableData) {
         let annotations = travelMapView.annotations
         travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<seoulSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.seoulDoneStamp)
-            annotation.title = seoulSpotListDidStamp[i].title
+            
+        for i in 0..<didSpotList.count {
+            let annotation = MyPointAnnotation(obj: stampRegion)
+            annotation.title = didSpotList[i].title
             annotation.coordinate = CLLocationCoordinate2D(
-                latitude: seoulSpotListDidStamp[i].latitude,
-                longitude: seoulSpotListDidStamp[i].longitude
+                latitude: didSpotList[i].latitude,
+                longitude: didSpotList[i].longitude
             )
             travelMapView.addAnnotation(annotation)
         }
         
-        for i in 0..<seoulSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.seoulNotDoneStamp)
-            annotation.title = seoulSpotListNotDidStamp[i].title
+        for i in 0..<notDidSpotList.count {
+            let annotation = MyPointAnnotation(obj: notStampRegion)
+            annotation.title = notDidSpotList[i].title
             annotation.coordinate = CLLocationCoordinate2D(
-                latitude: seoulSpotListNotDidStamp[i].latitude,
-                longitude: seoulSpotListNotDidStamp[i].longitude
+                latitude: notDidSpotList[i].latitude,
+                longitude: notDidSpotList[i].longitude
             )
             travelMapView.addAnnotation(annotation)
         }
     }
-    
-    //경기도 여행지
-    func gyeongGiDoAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<gyeongGiDoSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeonGiDoDoneStamp)
-            annotation.title = gyeongGiDoSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongGiDoSpotListDidStamp[i].latitude,
-                longitude: gyeongGiDoSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<gyeongGiDoSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeonGiDoNotDoneStamp)
-            annotation.title = gyeongGiDoSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongGiDoSpotListNotDidStamp[i].latitude,
-                longitude: gyeongGiDoSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
-    //부산 여행지
-    func busanAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<busanSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.busanDoneStamp)
-            annotation.title = busanSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: busanSpotListDidStamp[i].latitude,
-                longitude: busanSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<busanSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.busanNotDoneStamp)
-            annotation.title = busanSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: busanSpotListNotDidStamp[i].latitude,
-                longitude: busanSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
-    //경상남도 여행지
-    func gyeongNamAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<gyeongNamSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeongNamDoneStamp)
-            annotation.title = gyeongNamSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongNamSpotListDidStamp[i].latitude,
-                longitude: gyeongNamSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<gyeongNamSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.gyeongNamNotDoneStamp)
-            annotation.title = gyeongNamSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: gyeongNamSpotListNotDidStamp[i].latitude,
-                longitude: gyeongNamSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
-    //제주도 여행지
-    func jejuAnnotationSetting() {
-        
-        let annotations = travelMapView.annotations
-        travelMapView.removeAnnotations(annotations)
-        
-        for i in 0..<jejuSpotListDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.jejuDoneStamp)
-            annotation.title = jejuSpotListDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: jejuSpotListDidStamp[i].latitude,
-                longitude: jejuSpotListDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-        
-        for i in 0..<jejuSpotListNotDidStamp.count {
-            let annotation = MyPointAnnotation(obj: ComparableData.jejuNotDoneStamp)
-            annotation.title = jejuSpotListNotDidStamp[i].title
-            annotation.coordinate = CLLocationCoordinate2D(
-                latitude: jejuSpotListNotDidStamp[i].latitude,
-                longitude: jejuSpotListNotDidStamp[i].longitude
-            )
-            travelMapView.addAnnotation(annotation)
-        }
-    }
-    
 }

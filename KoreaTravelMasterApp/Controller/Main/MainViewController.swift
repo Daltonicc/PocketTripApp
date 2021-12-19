@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
                                        gyeongGiDoTravelSpotData
     ]
     let travelAreaCode: [Int] = [1, 6, 31, 36, 39]
-    let localRealm = try! Realm()
+    var localRealm = try! Realm()
     
     // MARK: - LifeCycle
     
@@ -218,28 +218,22 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 1:
             titleLabel.text = "서울"
             percentLabel.text = "달성률: \(round(Double(seoulSpotListDidStamp.count) / Double(255) * 1000) / 10)%"
-//            seoulBackgroundConfigure()
             BackgroundConfigure(spotListDidStamp: seoulSpotListDidStamp, AllspotCount: 255, puzzleImage: "SeoulPuzzle")
 //            backgroundImageView.isHidden = true
         case 2:
             titleLabel.text = "부산"
             percentLabel.text = "달성률: \(round(Double(busanSpotListDidStamp.count) / Double(119) * 1000) / 10)%"
-//            busanBackgroundConfigure()
         case 3:
             titleLabel.text = "경기도"
             percentLabel.text = "달성률: \(round(Double(gyeongGiDoSpotListDidStamp.count) / Double(708) * 1000) / 10)%"
-//            gyeongGiDoBackGroundConfigure()
         case 4:
             titleLabel.text = "경상남도"
             percentLabel.text = "달성률: \(round(Double(gyeongNamSpotListDidStamp.count) / Double(729) * 1000) / 10)%"
-//            gyeongNamBackgroundConfigure()
         case 5:
             titleLabel.text = "제주도"
             percentLabel.text = "달성률: \(round(Double(jejuSpotListDidStamp.count) / Double(279) * 1000) / 10)%"
-//            jejuBackgroundConfigure()
         default: print("page Default")
         }
-//        percentLabel.text = "달성률: 100.0%"
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -256,9 +250,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         imageCollectionView.collectionViewLayout = layout
     }
 }
-//테스트중
-
-
 /*
  구현해야하는 거
  1. 어노테이션 검색 기능(맵뷰(옵션), 나의여행지뷰, 전체여행지뷰) (해결 - 맵뷰제외하고)

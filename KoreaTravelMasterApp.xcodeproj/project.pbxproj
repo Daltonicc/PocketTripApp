@@ -40,7 +40,9 @@
 		6A950BF0274E144200DDAE25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A950BEF274E144200DDAE25 /* RealmSwift */; };
 		6A950BF3274E2F5400DDAE25 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */; };
 		6A9F6EAB27626A0300D5D521 /* libswift_Concurrency.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		6A9F6F0927683EDB00D5D521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */; };
+		6A9F6F3D276C8B3400D5D521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9F6F3C276C8B3400D5D521 /* GoogleService-Info.plist */; };
+		6A9F6F40276C8C4500D5D521 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9F6F3F276C8C4500D5D521 /* FirebaseAnalytics */; };
+		6A9F6F42276C8C4500D5D521 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9F6F41276C8C4500D5D521 /* FirebaseCrashlytics */; };
 		6AC0C4122754177100D876BD /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC0C4112754177100D876BD /* Zip */; };
 		6AC0C4152754FBA500D876BD /* Main+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0C4142754FBA500D876BD /* Main+Extension.swift */; };
 		6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */; };
@@ -59,11 +61,9 @@
 		6AEEC44B275E8532008E8E28 /* Main+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */; };
 		6AEEC44F275F9997008E8E28 /* TravelMap+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEEC44E275F9997008E8E28 /* TravelMap+Annotation.swift */; };
 		6AFD4AB12752B08B00B971B0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */; };
-		6BB0B7CBA0358A1E0D000B87 /* Pods_KoreaTravelMasterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1EED78222267A403D4F266 /* Pods_KoreaTravelMasterApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FDED951DA8B72322A2B6985 /* Pods-KoreaTravelMasterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaTravelMasterApp.release.xcconfig"; path = "Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp.release.xcconfig"; sourceTree = "<group>"; };
 		6A6F158D274F6FE20076E4FC /* MytravelSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytravelSpotViewController.swift; sourceTree = "<group>"; };
 		6A6F1590274FBD3F0076E4FC /* MytravelSpot+TabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MytravelSpot+TabelView.swift"; sourceTree = "<group>"; };
 		6A6F1592274FBE180076E4FC /* MytravelSpotTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytravelSpotTabelViewCell.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		6A950BEA274E13D200DDAE25 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		6A950BF2274E2F5400DDAE25 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
-		6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A9F6F3C276C8B3400D5D521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AC0C4142754FBA500D876BD /* Main+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+Extension.swift"; sourceTree = "<group>"; };
 		6AC0C41727550A3D00D876BD /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
 		6AC0C41827550A3D00D876BD /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
@@ -112,8 +112,6 @@
 		6AEEC44A275E8532008E8E28 /* Main+SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+SaveData.swift"; sourceTree = "<group>"; };
 		6AEEC44E275F9997008E8E28 /* TravelMap+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TravelMap+Annotation.swift"; sourceTree = "<group>"; };
 		6AFD4AB02752B08B00B971B0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		8CF537FF82EEBC203DA81E2A /* Pods-KoreaTravelMasterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaTravelMasterApp.debug.xcconfig"; path = "Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp.debug.xcconfig"; sourceTree = "<group>"; };
-		8D1EED78222267A403D4F266 /* Pods_KoreaTravelMasterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreaTravelMasterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +126,9 @@
 				6A950BDE274BC37D00DDAE25 /* Kingfisher in Frameworks */,
 				6A950BDB274BC35F00DDAE25 /* SwiftyJSON in Frameworks */,
 				6A950BD8274BC33C00DDAE25 /* Alamofire in Frameworks */,
+				6A9F6F42276C8C4500D5D521 /* FirebaseCrashlytics in Frameworks */,
 				6A950BEE274E144200DDAE25 /* Realm in Frameworks */,
-				6BB0B7CBA0358A1E0D000B87 /* Pods_KoreaTravelMasterApp.framework in Frameworks */,
+				6A9F6F40276C8C4500D5D521 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +169,6 @@
 				6A950BA02742C56B00DDAE25 /* KoreaTravelMasterApp */,
 				6A950B9F2742C56B00DDAE25 /* Products */,
 				6A9F6EA927626A0300D5D521 /* Frameworks */,
-				8861D915FA3AC9F731107A32 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,7 +189,7 @@
 				6AFD4AB22752C49D00B971B0 /* Controller */,
 				6AC0C41627550A2600D876BD /* Font */,
 				6A950BAF2742C56C00DDAE25 /* Info.plist */,
-				6A9F6F0827683EDB00D5D521 /* GoogleService-Info.plist */,
+				6A9F6F3C276C8B3400D5D521 /* GoogleService-Info.plist */,
 			);
 			path = KoreaTravelMasterApp;
 			sourceTree = "<group>";
@@ -250,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				6A9F6EAA27626A0300D5D521 /* libswift_Concurrency.tbd */,
-				8D1EED78222267A403D4F266 /* Pods_KoreaTravelMasterApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -336,15 +333,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8861D915FA3AC9F731107A32 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8CF537FF82EEBC203DA81E2A /* Pods-KoreaTravelMasterApp.debug.xcconfig */,
-				2FDED951DA8B72322A2B6985 /* Pods-KoreaTravelMasterApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,11 +341,9 @@
 			buildConfigurationList = 6A950BB22742C56C00DDAE25 /* Build configuration list for PBXNativeTarget "KoreaTravelMasterApp" */;
 			buildPhases = (
 				6A950B9A2742C56B00DDAE25 /* Sources */,
-				4305AD935C7C04A2D09197E2 /* [CP] Check Pods Manifest.lock */,
 				6A950B9B2742C56B00DDAE25 /* Frameworks */,
 				6A950B9C2742C56B00DDAE25 /* Resources */,
-				681607F1EB6638F7DABCDCAF /* [CP] Embed Pods Frameworks */,
-				6A9F6F0A27683F2800D5D521 /* ShellScript */,
+				6A9F6F44276C970200D5D521 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -372,6 +358,8 @@
 				6A950BEF274E144200DDAE25 /* RealmSwift */,
 				6AC0C4112754177100D876BD /* Zip */,
 				6AC0C442275690E700D876BD /* SkeletonView */,
+				6A9F6F3F276C8C4500D5D521 /* FirebaseAnalytics */,
+				6A9F6F41276C8C4500D5D521 /* FirebaseCrashlytics */,
 			);
 			productName = KoreaTravelMasterApp;
 			productReference = 6A950B9E2742C56B00DDAE25 /* KoreaTravelMasterApp.app */;
@@ -408,6 +396,7 @@
 				6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */,
 				6AC0C441275690E700D876BD /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				6A9F6F3E276C8C4500D5D521 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6A950B9F2742C56B00DDAE25 /* Products */;
 			projectDirPath = "";
@@ -423,8 +412,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A9F6F3D276C8B3400D5D521 /* GoogleService-Info.plist in Resources */,
 				6A950BAE2742C56C00DDAE25 /* LaunchScreen.storyboard in Resources */,
-				6A9F6F0927683EDB00D5D521 /* GoogleService-Info.plist in Resources */,
 				6A950BAB2742C56C00DDAE25 /* Assets.xcassets in Resources */,
 				6AC0C41B27550A3D00D876BD /* SB 어그로OTF B.otf in Resources */,
 				6AC0C41A27550A3D00D876BD /* SB 어그로OTF M.otf in Resources */,
@@ -438,7 +427,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4305AD935C7C04A2D09197E2 /* [CP] Check Pods Manifest.lock */ = {
+		6A9F6F44276C970200D5D521 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -446,55 +435,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KoreaTravelMasterApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		681607F1EB6638F7DABCDCAF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoreaTravelMasterApp/Pods-KoreaTravelMasterApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A9F6F0A27683F2800D5D521 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -598,7 +548,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -683,7 +633,6 @@
 		};
 		6A950BB32742C56C00DDAE25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CF537FF82EEBC203DA81E2A /* Pods-KoreaTravelMasterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -712,6 +661,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -723,12 +673,12 @@
 		};
 		6A950BB42742C56C00DDAE25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FDED951DA8B72322A2B6985 /* Pods-KoreaTravelMasterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoreaTravelMasterApp/Info.plist;
@@ -751,6 +701,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -816,6 +767,14 @@
 				version = 10.19.0;
 			};
 		};
+		6A9F6F3E276C8C4500D5D521 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		6AC0C4102754177100D876BD /* XCRemoteSwiftPackageReference "Zip" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/Zip.git";
@@ -859,6 +818,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A950BEC274E144200DDAE25 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		6A9F6F3F276C8C4500D5D521 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A9F6F3E276C8C4500D5D521 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		6A9F6F41276C8C4500D5D521 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A9F6F3E276C8C4500D5D521 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		6AC0C4112754177100D876BD /* Zip */ = {
 			isa = XCSwiftPackageProductDependency;
