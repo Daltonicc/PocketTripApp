@@ -7,13 +7,6 @@
 
 import Foundation
 
-//경기도 관광지 딕셔너리 추가해주는 함수
-func updatingGyeongGiDoDictionary() {
-    for i in 0..<gyeongGiDoTravelSpotData.count {
-        travelSpotDictionary.updateValue(gyeongGiDoTravelSpotData[i].contentId, forKey: gyeongGiDoTravelSpotData[i].title)
-    }
-}
-
 var gyeongGiDoTravelSpotData: [TravelData] = [
     //자연관광지
     TravelData(title: "가덕산", contentId: 125462, latitude: 37.9202321907, longitude: 127.5683098007),

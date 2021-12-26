@@ -7,15 +7,6 @@
 
 import Foundation
 
-var travelSpotDictionary: [String:Int] = [:]
-
-//서울 관광지 딕셔너리 만들어주는 함수
-func updatingSeoulDictionary() {
-    for i in 0..<seoulTravelSpotData.count {
-        travelSpotDictionary.updateValue(seoulTravelSpotData[i].contentId, forKey: seoulTravelSpotData[i].title)
-    }
-}
-
 var seoulTravelSpotData: [TravelData] = [
 
     TravelData(title: "강서습지생태공원", contentId: 809490, latitude: 37.5860879769, longitude: 126.8171490732),

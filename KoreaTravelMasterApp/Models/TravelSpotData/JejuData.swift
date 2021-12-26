@@ -7,12 +7,6 @@
 
 import Foundation
 
-func updatingJejuDictionary() {
-    for i in 0..<jejuSpotData.count {
-        travelSpotDictionary.updateValue(jejuSpotData[i].contentId, forKey: jejuSpotData[i].title)
-    }
-}
-
 var jejuSpotData: [TravelData] = [
     //자연관광지
     TravelData(title: "가마오름", contentId: 1884191, latitude: 33.3056418997, longitude: 126.24705430700001),

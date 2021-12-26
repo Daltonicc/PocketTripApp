@@ -147,6 +147,5 @@ class MainCollectionViewCell: UICollectionViewCell {
                 
         default: mainImageView.image = UIImage(named: "\(percentImageName)0percent")
         }
-//        mainImageView.image = UIImage(named: "\(percentImageName)100percent")
     }
 }

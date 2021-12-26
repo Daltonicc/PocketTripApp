@@ -7,12 +7,6 @@
 
 import Foundation
 
-func updatingBusanDictionary() {
-    for i in 0..<busanSpotData.count {
-        travelSpotDictionary.updateValue(busanSpotData[i].contentId, forKey: busanSpotData[i].title)
-    }
-}
-
 var busanSpotData: [TravelData] = [
 
     //자연

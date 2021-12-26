@@ -8,6 +8,13 @@
 import UIKit
 import RealmSwift
 
+/*
+ 해결해야할 거
+ 1. 컬러 블렌디드로 영역확인후 수정: 특히 맵뷰 어노테이션 영역 체크
+ 2. 복구 시 zip파일 이름 확인하기
+ 3.
+ 
+ */
 class MainViewController: UIViewController {
 
     // MARK: - Property
@@ -40,9 +47,7 @@ class MainViewController: UIViewController {
     }
     var region = MyRegion.myRegion
     //여행지 데이터 2차원 배열
-    let travelKorea: [[TravelData]] = [seoulTravelSpotData,
-                                       gyeongGiDoTravelSpotData
-    ]
+    let travelKorea: [[TravelData]] = [seoulTravelSpotData, gyeongGiDoTravelSpotData]
     let travelAreaCode: [Int] = [1, 6, 31, 36, 39]
     var localRealm = try! Realm()
     
@@ -59,7 +64,6 @@ class MainViewController: UIViewController {
         saveSpotData()
         //여행지 딕셔너리
         makeTravelSpotDictionary()
-        
         
         backgroundImageView.isHidden = true
         
@@ -125,11 +129,12 @@ class MainViewController: UIViewController {
     
     func makeTravelSpotDictionary() {
         
-        updatingSeoulDictionary()
-        updatingGyeongGiDoDictionary()
-        updatingBusanDictionary()
-        updatingGyeongNamDictionary()
-        updatingJejuDictionary()
+        updatingDictionary(spotData: seoulTravelSpotData)
+        updatingDictionary(spotData: gyeongGiDoTravelSpotData)
+        updatingDictionary(spotData: busanSpotData)
+        updatingDictionary(spotData: gyeongNamSpotData)
+        updatingDictionary(spotData: jejuSpotData)
+        
         //이후에 추가데이터들 들어오면 추가
     }
     
