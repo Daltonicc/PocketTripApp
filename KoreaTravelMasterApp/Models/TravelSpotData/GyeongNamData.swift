@@ -7,12 +7,6 @@
 
 import Foundation
 
-func updatingGyeongNamDictionary() {
-    for i in 0..<gyeongNamSpotData.count {
-        travelSpotDictionary.updateValue(gyeongNamSpotData[i].contentId, forKey: gyeongNamSpotData[i].title)
-    }
-}
-
 var gyeongNamSpotData: [TravelData] = [
     
     //자연

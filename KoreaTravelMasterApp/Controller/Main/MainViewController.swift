@@ -129,17 +129,15 @@ class MainViewController: UIViewController {
     
     func makeTravelSpotDictionary() {
         
-        updatingDictionary(spotData: seoulTravelSpotData)
-        updatingDictionary(spotData: gyeongGiDoTravelSpotData)
-        updatingDictionary(spotData: busanSpotData)
-        updatingDictionary(spotData: gyeongNamSpotData)
-        updatingDictionary(spotData: jejuSpotData)
-        
+        updatingDictionary(spotData: seoulTravelSpotData, areaCode: 1)
+        updatingDictionary(spotData: gyeongGiDoTravelSpotData, areaCode: 31)
+        updatingDictionary(spotData: busanSpotData, areaCode: 6)
+        updatingDictionary(spotData: gyeongNamSpotData, areaCode: 36)
+        updatingDictionary(spotData: jejuSpotData, areaCode: 39)
         //이후에 추가데이터들 들어오면 추가
+        print(travelSpotDictionary)
+        print(travelSpotDictionary.count)
     }
-    
-    //여행지데이터 디비에 쌓아주기
-    
     
     @IBAction func findPlaceButtonClicked(_ sender: UIBarButtonItem) {
         

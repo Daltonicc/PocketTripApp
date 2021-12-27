@@ -50,7 +50,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     }
     
     func cellconfiguration(row: Int) {
-        //708, 729, 279
         switch row {
         case 0:
             koreaConfigure()

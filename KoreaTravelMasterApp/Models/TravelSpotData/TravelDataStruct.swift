@@ -26,8 +26,14 @@ struct AreaCode {
 var travelSpotDictionary: [String:Int] = [:]
 
 //관광지 딕셔너리 만들어주는 함수
-func updatingDictionary(spotData: [TravelData]) {
-    for i in 0..<spotData.count {
-        travelSpotDictionary.updateValue(spotData[i].contentId, forKey: spotData[i].title)
+func updatingDictionary(spotData: [TravelData], areaCode: Int) {
+    
+    var nowStatus = UserDefaults.standard.bool(forKey: "dictionayMakingDoOnce\(areaCode)")
+    if nowStatus == false {
+        for i in 0..<spotData.count {
+            travelSpotDictionary.updateValue(spotData[i].contentId, forKey: spotData[i].title)
+        }
     }
+    nowStatus = true
+    UserDefaults.standard.set(nowStatus, forKey: "dictionaryMakingDoOnce\(areaCode)")
 }
