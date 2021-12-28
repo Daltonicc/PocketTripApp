@@ -36,7 +36,8 @@ class SettingViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
     
-    func documenDirectoryPath() -> String? {
+    func documentDirectoryPath() -> String? {
+        
         let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
         let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
         let path = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
@@ -46,13 +47,31 @@ class SettingViewController: UIViewController {
             return nil
         }
     }
-    
+    //백업완료 후 메세지 추가 필요.
     func presentActivityViewController() {
         
-        let fileName = (documenDirectoryPath()! as NSString).appendingPathComponent("PocketTrip.zip")
-        let fileURL = URL(fileURLWithPath: fileName)
-        let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
-        self.present(vc, animated: true, completion: nil)
+        backupCautionAlert { UIAlertAction in
+            let fileName = (self.documentDirectoryPath()! as NSString).appendingPathComponent("PocketTrip.zip")
+            let fileURL = URL(fileURLWithPath: fileName)
+            let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
+            self.present(vc, animated: true)
+        }
+    }
+    
+    func restoreErrorAlert() {
+        
+        let alert = UIAlertController(title: "알맞은 파일을 골라주세요!", message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func backupCautionAlert(handler: @escaping (UIAlertAction) -> Void) {
+        
+        let alert = UIAlertController(title: "주의!", message: "백업파일명을 수정하면 나중에 복구가 불가능합니다.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: handler)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func myRegionSetting(_ sender: UIButton) {
@@ -97,9 +116,10 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func backupButtonClicked(_ sender: UIButton) {
+                
         var urlPaths = [URL]()
         
-        if let path = documenDirectoryPath() {
+        if let path = documentDirectoryPath() {
             let realm = (path as NSString).appendingPathComponent("default.realm")
             
             if FileManager.default.fileExists(atPath: realm) {
@@ -180,7 +200,6 @@ extension SettingViewController: UIDocumentPickerDelegate {
         print(#function)
         
         guard let selectedFileURL = urls.first else { return }
-        
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let sandboxFileURL = directory.appendingPathComponent(selectedFileURL.lastPathComponent)
         
@@ -189,11 +208,23 @@ extension SettingViewController: UIDocumentPickerDelegate {
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                 let fileURL = documentDirectory.appendingPathComponent("PocketTrip.zip")
                 
-                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
-                    showToast(vc: self, message: "복구가 완료되었습니다. \n앱을 다시 실행해주세요!")
-                }, fileOutputHandler: { unzippedFile in
-                    print("unzippedFile: \(unzippedFile)")
-                })
+                //픽한 것과 실제 백업해야할 파일이 일치하는지 체크.
+                guard sandboxFileURL == fileURL else {
+                    restoreErrorAlert()
+                    return
+                }
+                try Zip.unzipFile(
+                    fileURL,
+                    destination: documentDirectory,
+                    overwrite: true,
+                    password: nil,
+                    progress: { progress in
+                        showToast(vc: self, message: "복구가 완료되었습니다. \n앱을 다시 실행해주세요!")
+                    },
+                    fileOutputHandler: { unzippedFile in
+                        print("unzippedFile: \(unzippedFile)")
+                    }
+                )
             } catch {
                 print("복구 실패")
             }
@@ -203,16 +234,28 @@ extension SettingViewController: UIDocumentPickerDelegate {
                 
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                 let fileURL = documentDirectory.appendingPathComponent("PocketTrip.zip")
+
+                //픽한 것과 실제 백업해야할 파일이 일치하는지 체크.
+                guard sandboxFileURL == fileURL else {
+                    restoreErrorAlert()
+                    return
+                }
                 
-                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
-                    showToast(vc: self, message: "복구가 완료되었습니다!")
-                }, fileOutputHandler: { unzippedFile in
-                    print("unzippedFile: \(unzippedFile)")
-                })
+                try Zip.unzipFile(
+                    fileURL,
+                    destination: documentDirectory,
+                    overwrite: true,
+                    password: nil,
+                    progress: { progress in
+                        showToast(vc: self, message: "복구가 완료되었습니다!. \n앱을 다시 실행해주세요!")
+                    },
+                    fileOutputHandler: { unzippedFile in
+                        print("unzippedFile: \(unzippedFile)")
+                    }
+                )
             } catch {
                 print("복구 실패")
             }
         }
     }
 }
-//
