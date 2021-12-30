@@ -57,7 +57,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         collectionViewSetting()
-        navigationConfigure()
         firstRegionAlert()
         LabelSetting()
         //최초 DB저장
@@ -74,14 +73,6 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - Method
-    
-    //나중에 디자인 변경에 따라 수정예정
-    func navigationConfigure() {
-        
-//        navigationController?.navigationBar.layer.borderWidth = 1
-//        navigationController?.navigationBar.layer.borderColor = UIColor.lightGray.cgColor
-    }
-    
     func LabelSetting() {
         
         titleLabel.text = "한국"
@@ -122,8 +113,6 @@ class MainViewController: UIViewController {
         updatingDictionary(spotData: gyeongNamSpotData, areaCode: 36)
         updatingDictionary(spotData: jejuSpotData, areaCode: 39)
         //이후에 추가데이터들 들어오면 추가
-        print(travelSpotDictionary)
-        print(travelSpotDictionary.count)
     }
     
     @IBAction func findPlaceButtonClicked(_ sender: UIBarButtonItem) {
@@ -264,5 +253,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
  사용자의 위치를 추적하기 위해서 권한이 필요합니다.
  
  오늘 구현한 거
+ 
+ //영상에 담아야 할 것
+ 0. 각 여행지 콜렉션뷰
+ 1. 여행지 모으기
+ 2. 100미터 밖일 때
+ 3. 필터처리
+ 4. 여행지 관리
+ 5. 전체 여행지
+ 6. 세팅 백업/복구 틀린거 고른거도
+ 7.
  
  */

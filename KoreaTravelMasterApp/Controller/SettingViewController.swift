@@ -50,20 +50,12 @@ class SettingViewController: UIViewController {
     //백업완료 후 메세지 추가 필요.
     func presentActivityViewController() {
         
-        backupCautionAlert { UIAlertAction in
+        backupCautionAlert { action in
             let fileName = (self.documentDirectoryPath()! as NSString).appendingPathComponent("PocketTrip.zip")
             let fileURL = URL(fileURLWithPath: fileName)
             let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
             self.present(vc, animated: true)
         }
-    }
-    
-    func restoreErrorAlert() {
-        
-        let alert = UIAlertController(title: "알맞은 파일을 골라주세요!", message: nil, preferredStyle: .alert)
-        let action = UIAlertAction(title: "확인", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
     }
     
     func backupCautionAlert(handler: @escaping (UIAlertAction) -> Void) {
@@ -74,6 +66,14 @@ class SettingViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func restoreErrorAlert() {
+        
+        let alert = UIAlertController(title: "알맞은 파일을 골라주세요!", message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+        
     @IBAction func myRegionSetting(_ sender: UIButton) {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

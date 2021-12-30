@@ -343,7 +343,7 @@
 				6A950B9A2742C56B00DDAE25 /* Sources */,
 				6A950B9B2742C56B00DDAE25 /* Frameworks */,
 				6A950B9C2742C56B00DDAE25 /* Resources */,
-				6A9F6F44276C970200D5D521 /* Run Script */,
+				6A9F6F44276C970200D5D521 /* Firebase Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -427,7 +427,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6A9F6F44276C970200D5D521 /* Run Script */ = {
+		6A9F6F44276C970200D5D521 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,7 +437,7 @@
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
-			name = "Run Script";
+			name = "Firebase Crashlytics";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -637,7 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -660,7 +660,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -677,7 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PY3HK5UPTR;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -700,7 +700,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.KoreaTravelMasterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
