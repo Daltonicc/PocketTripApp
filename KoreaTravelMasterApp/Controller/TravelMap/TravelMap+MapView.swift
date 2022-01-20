@@ -72,7 +72,6 @@ extension TravelMapViewController: CLLocationManagerDelegate {
         }
         // 어노테이션 뷰 처리해줘야함. 레이블이랑 이미지뷰로 구성하게끔
         var annotationView = travelMapView.dequeueReusableAnnotationView(withIdentifier: "custom")
-
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
             annotationView?.canShowCallout = true
@@ -85,10 +84,13 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             switch annotation.obj! {
             case .doneStamp:
                 annotationView?.image = UIImage(named: "doneStampPinImage")
+//                annotationImageView.image = UIImage(named: "doneStampPinImage")
             case .seoulDoneStamp:
                 annotationView?.image = UIImage(named: "doneStampPinImage")
+//                annotationImageView.image = UIImage(named: "doneStampPinImage")
             case .seoulNotDoneStamp:
                 annotationView?.image = UIImage(named: "notDoneStampPinImage")
+//                annotationImageView.image = UIImage(named: "notDoneStampPinImage")
             case .gyeonGiDoDoneStamp:
                 annotationView?.image = UIImage(named: "doneStampPinImage")
             case .gyeonGiDoNotDoneStamp:
@@ -184,7 +186,7 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             //조건문으로 거리 100미터 이하일 때만 버튼 누를 수 있게 처리
             print(distanceFromUserLocation)
             // 테스트용. 거리 10만으로 지정. 나중에 100으로 바꾸자
-            if distanceFromUserLocation > 10000 {
+            if distanceFromUserLocation > 100 {
                 collectButton.isEnabled = false
                 cautionButton.isHidden = false
             } else {

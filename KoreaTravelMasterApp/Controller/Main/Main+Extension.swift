@@ -9,15 +9,6 @@ import UIKit
 import SwiftUI
 import RealmSwift
 
-// /Users/vf008vf/desktop/project/koreatravelmasterapp/firebase-ios-sdk/Crashlytics
-// /Users/vf008vf/Library/Developer/Xcode/Archives/2021-12-10/KoreaTravelMasterApp 2021-12-10 1.57 AM.xcarchive/dsyms
-// /Users/vf008vf/desktop/project/koreatravelmasterapp/koreatravelmasterapp/GoogleService-Info.plist
-// /Users/vf008vf/desktop/project/koreatravelmasterapp/firebase-ios-sdk/Crashlytics/upload-symbols -gsp /Users/vf008vf/desktop/project/koreatravelmasterapp/koreatravelmasterapp/GoogleService-Info.plist -p ios "/Users/vf008vf/Library/Developer/Xcode/Archives/2021-12-10/KoreaTravelMasterApp 2021-12-10 1.57 AM.xcarchive/dsyms"
-
-// /Users/vf008vf/Library/Developer/Xcode/DerivedData/KoreaTravelMasterApp-flhlzqhhxzfxmcgdlwilegaaxxsv/Build/Products/Release-iphonesimulator/KoreaTravelMasterApp.app.dSYM/Contents/Resources/DWARF/KoreaTravelMasterApp
-
-//  /Users/vf008vf/Library/Developer/Xcode/DerivedData/KoreaTravelMasterApp-flhlzqhhxzfxmcgdlwilegaaxxsv/Build/Products/Release-iphonesimulator/FirebaseCrashlytics/FirebaseCrashlytics.framework.dSYM
-
 extension MainViewController {
     
     func firstRegionAlert() {
@@ -45,7 +36,7 @@ extension MainViewController {
         let Percent = round(Double(spotListDidStamp.count) / Double(AllspotCount) * 1000) / 10
         
         switch Percent {
-        case 0...9.99:  backgroundImageView.image = UIImage(named: "\(puzzleImage)0")
+        case 0...9.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)0")
         case 10...29.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)25")
         case 30...59.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)50")
         case 60...99.99: backgroundImageView.image = UIImage(named: "\(puzzleImage)75")
