@@ -14,7 +14,7 @@ import Kingfisher
 import RealmSwift
 import SkeletonView
 
-class TravelMapViewController: UIViewController {
+final class TravelMapViewController: UIViewController {
 
     // MARK: - Property
     

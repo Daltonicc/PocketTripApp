@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import Kingfisher
 
-class TravelSpotDetailViewController: UIViewController {
+final class TravelSpotDetailViewController: UIViewController {
 
     @IBOutlet var spotImageView: UIImageView!
     @IBOutlet var spotOverviewTextView: UITextView!

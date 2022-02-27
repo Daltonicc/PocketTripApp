@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import RealmSwift
 
-class WebViewController: UIViewController {
+final class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     

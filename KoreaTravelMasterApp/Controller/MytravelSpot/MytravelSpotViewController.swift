@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class MytravelSpotViewController: UIViewController {
+final class MytravelSpotViewController: UIViewController {
 
     @IBOutlet weak var myTravelSpotTableView: UITableView!
     

@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class AwardsViewController: UIViewController {
+final class AwardsViewController: UIViewController {
 
     @IBOutlet weak var awardsCollectionView: UICollectionView!
     

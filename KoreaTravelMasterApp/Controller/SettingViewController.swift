@@ -9,7 +9,7 @@ import UIKit
 import Zip
 import MobileCoreServices
 
-class SettingViewController: UIViewController {
+final class SettingViewController: UIViewController {
 
     @IBOutlet weak var regionLabel: UILabel!
     

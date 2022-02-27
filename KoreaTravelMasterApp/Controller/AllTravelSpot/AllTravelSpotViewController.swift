@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class AllTravelSpotViewController: UIViewController {
+final class AllTravelSpotViewController: UIViewController {
 
     @IBOutlet var allSpotTableView: UITableView!
     

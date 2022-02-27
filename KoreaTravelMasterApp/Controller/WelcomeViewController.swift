@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var explanationView: UIView!
     @IBOutlet weak var startButton: UIButton!

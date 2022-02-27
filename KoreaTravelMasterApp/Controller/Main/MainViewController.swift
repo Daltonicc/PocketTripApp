@@ -12,10 +12,9 @@ import RealmSwift
  해결해야할 거
  1. 컬러 블렌디드로 영역확인후 수정: 특히 맵뷰 어노테이션 영역 체크
  2. 복구 시 zip파일 이름 확인하기
- 3.
  
  */
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     // MARK: - Property
     
@@ -176,6 +175,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as? MainCollectionViewCell else { return UICollectionViewCell() }
         
         let row = indexPath.row
+        print(row)
         
         cell.cellconfiguration(row: row)
         cell.backgroundColor = .white
