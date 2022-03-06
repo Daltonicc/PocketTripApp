@@ -1,26 +1,17 @@
-# PocketTrip
-
-### [기획안](https://maze-mozzarella-6e5.notion.site/c4afe84b8d084560a152ad8b480c2fa3)
-### [개발공수](https://maze-mozzarella-6e5.notion.site/8ead788b3ea940b0a4cb1aade1a17555)
-### [총 정리](https://maze-mozzarella-6e5.notion.site/PocketTrip-67dfb21bd1a840c4810eb8f2d2077a35)
-
-## 팀빌딩 및 개인 진행 상황
-### [이터레이션1](https://maze-mozzarella-6e5.notion.site/1-11-15-11-17-01646bdf477f421e8dbec571acd17671)
-### [이터레이션2](https://maze-mozzarella-6e5.notion.site/2-11-18-11-21-246993fa06484accb01c3c50e4ad21f7)
-### [이터레이션3](https://maze-mozzarella-6e5.notion.site/3-11-22-11-24-b205f83f03f04757a253d15bb94ff323)
-### [이터레이션4](https://maze-mozzarella-6e5.notion.site/4-11-25-11-28-5b4d5d307cdf4397a40c45718a0a8f9f)
-### [이터레이션5](https://maze-mozzarella-6e5.notion.site/5-11-29-12-1-56f807d7854141b0b97aa6ee9ba56081)
-### [이터레이션6](https://maze-mozzarella-6e5.notion.site/6-12-2-12-5-b4c901309ab1465da7a4f745ad025ef2)
-### [이터레이션7](https://maze-mozzarella-6e5.notion.site/7-12-6-12-8-7e6dcc01552a4273a924b1f0c86a2741)
-### [12.9 ~](https://maze-mozzarella-6e5.notion.site/12-9-6aa95090af354351afcb3b7fa25996e3)
-
 # 포켓트립 - 여행을 수집하다
 
-기본적인 커뮤니티 기능을 갖춘 iOS 어플리케이션
+주변 여행지를 찾고 여행지를 수집하는 위치 기반 iOS 어플리케이션.
 
 ## Description
 
-- 
+- 데이터베이스(Realm) 및 파이어베이스 애널리틱스/크래시리틱스 구현
+- 한국관광공사 API 활용
+- 약 한 달의 기간동안 혼자 기획과 개발 진행
+앱스토어 출시 후 유지 보수 진행 중
+- 앱스토어에 처음으로 출시한 앱
+
+#### [기획안](https://maze-mozzarella-6e5.notion.site/c4afe84b8d084560a152ad8b480c2fa3)
+#### [개발공수](https://maze-mozzarella-6e5.notion.site/8ead788b3ea940b0a4cb1aade1a17555)
 
 ## Getting Started
 
@@ -31,6 +22,7 @@
     Storyboard, AutoLayout
     Alamofire, SwiftyJSON
     SkeletonView, Kingfisher
+    Realm
     Firebase
 
 ### Issue
@@ -86,4 +78,4 @@
     <img src="https://user-images.githubusercontent.com/87598209/156913756-46422978-7faf-44c1-bcf6-88c3f3532e2b.png" width="250px" height="600px"></img>
     <img src="https://user-images.githubusercontent.com/87598209/156913740-b1dab04b-9ab1-4421-9f16-79095308e6f1.png" width="250px" height="600px"></img>
     <img src="https://user-images.githubusercontent.com/87598209/156913747-6d27e3c4-a218-4a7a-b0ed-4e6214442f0d.png" width="250px" height="600px"></img>
-</div>  
+</div>
