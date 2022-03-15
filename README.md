@@ -29,38 +29,13 @@
 
 ### Issue
 
-<details>
-  <summary>맵뷰에서 사용자의 위치를 클릭하면 런타임 오류 발생</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913506-50be2a21-fc6e-4f89-b6f6-f929ec61eff1.png" width="900px" height="800px"></img>
-  </details>
-<details>
-  <summary>여행지를 갔다왔는지 여부에 따라 어노테이션 뷰 다르게 보여주기</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913086-a156b904-1d47-4fd6-b4f7-ebd29ad51a63.png" width="900px" height="800px"></img>
-  <img src="https://user-images.githubusercontent.com/87598209/156913090-4e85c561-b1f1-494f-b434-fa8a3eacf9e2.png" width="900px" height="800px"></img>
-  </details>
-<details>
-  <summary>콜렉션뷰의 인덱스패스 아이템값 이슈</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913091-f2b24ec1-9104-4e2f-8ab6-f2cc3c5e8df2.png" width="800px" height="800px"></img>
-  </details>
-<details>
-  <summary>첫 번째 리젝</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913095-75e51270-f6b6-40d3-928d-8645f3fca5d1.png" width="900px" height="800px"></img>
-  <img src="https://user-images.githubusercontent.com/87598209/156913096-d4ba6327-d4d8-470e-8ff8-1d69890e3997.png" width="800px" height="250px"></img>
-  </details>  
-<details>
-  <summary>컴파일카탈로그에셋 컴파일 오류</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913097-6ab818be-7d19-4b7d-a6bc-8b3940610446.png" width="900px" height="800px"></img>
-  </details>
-<details>
-  <summary>시뮬레이터와 실기기에서는 정상적으로 빌드가 됐으나 해당 버전을 테스트플라이트에서 실행하면 크래시가 발생하는 이슈 발생</summary>
-  <img src="https://user-images.githubusercontent.com/87598209/156913098-b8cbc423-291d-4a98-87e8-abd41eaed052.png" width="700px" height="600px"></img>
-  <img src="https://user-images.githubusercontent.com/87598209/156913099-dbca3fce-99cb-43e0-aef9-7aff4c797c02.png" width="700px" height="600px"></img>
-  <img src="https://user-images.githubusercontent.com/87598209/156913100-4ebb416f-c1c9-4d0b-bc20-d22c3bc3f3d0.png" width="700px" height="600px"></img>
-  </details>  
-<details>
-  <summary>Firebase Crashlytics dsym 파일 누락 이슈</summary>
-  https://daltonic.tistory.com/26 블로그에 글로 정리.
-  </details>
+- [맵뷰에서 사용자의 위치를 클릭하면 런타임 오류 발생](https://github.com/Daltonicc/PocketTripApp/issues/1)
+- [여행지를 갔다왔는지 여부에 따라 어노테이션 뷰 다르게 보여주기](https://github.com/Daltonicc/PocketTripApp/issues/2)
+- [콜렉션뷰의 인덱스패스 아이템값 이슈](https://github.com/Daltonicc/PocketTripApp/issues/3)
+- [첫 번째 리젝](https://github.com/Daltonicc/PocketTripApp/issues/4)
+- [컴파일카탈로그에셋 컴파일 오류](https://github.com/Daltonicc/PocketTripApp/issues/5)
+- [시뮬레이터와 실기기에서는 정상적으로 빌드 되나 해당 버전을 테스트플라이트에서 실행하면 크래시가 발생하는 이슈](https://github.com/Daltonicc/PocketTripApp/issues/6)
+- [Firebase Crashlytics dsym 파일 누락 이슈](https://daltonic.tistory.com/26)
   
 *****
 
