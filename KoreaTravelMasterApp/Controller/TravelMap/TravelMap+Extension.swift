@@ -96,58 +96,58 @@ extension TravelMapViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let alreadyGet = UIAlertAction(title: "퍼즐을 획득한 곳만 보기", style: .default) { _ in
-            if self.AllSpotListDidStamp.count == 0 {
-                self.doNotHaveStampAlertConfigure()
+        let alreadyGet = UIAlertAction(title: "퍼즐을 획득한 곳만 보기", style: .default) { [weak self] _ in
+            if self?.AllSpotListDidStamp.count == 0 {
+                self?.doNotHaveStampAlertConfigure()
             } else {
-                self.doneStampAnnotationSetting()
+                self?.doneStampAnnotationSetting()
             }
         }
         
-        let seoul = UIAlertAction(title: "서울", style: .default) { _ in
-            self.annotationSetting(
-                didSpotList: self.seoulSpotListDidStamp,
-                notDidSpotList: self.seoulSpotListNotDidStamp,
+        let seoul = UIAlertAction(title: "서울", style: .default) { [weak self] _ in
+            self?.annotationSetting(
+                didSpotList: self?.seoulSpotListDidStamp,
+                notDidSpotList: self?.seoulSpotListNotDidStamp,
                 stampRegion: ComparableData.seoulDoneStamp,
                 notStampRegion: ComparableData.seoulNotDoneStamp
             )
-            self.region = "서울"
+            self?.region = "서울"
         }
-        let busan = UIAlertAction(title: "부산", style: .default) { _ in
-            self.annotationSetting(
-                didSpotList: self.busanSpotListDidStamp,
-                notDidSpotList: self.busanSpotListNotDidStamp,
+        let busan = UIAlertAction(title: "부산", style: .default) { [weak self] _ in
+            self?.annotationSetting(
+                didSpotList: self?.busanSpotListDidStamp,
+                notDidSpotList: self?.busanSpotListNotDidStamp,
                 stampRegion: ComparableData.busanDoneStamp,
                 notStampRegion: ComparableData.busanNotDoneStamp
             )
-            self.region = "부산"
+            self?.region = "부산"
         }
-        let gyeongGiDO = UIAlertAction(title: "경기도", style: .default) { _ in
-            self.annotationSetting(
-                didSpotList: self.gyeongGiDoSpotListDidStamp,
-                notDidSpotList: self.gyeongGiDoSpotListNotDidStamp,
+        let gyeongGiDO = UIAlertAction(title: "경기도", style: .default) { [weak self] _ in
+            self?.annotationSetting(
+                didSpotList: self?.gyeongGiDoSpotListDidStamp,
+                notDidSpotList: self?.gyeongGiDoSpotListNotDidStamp,
                 stampRegion: ComparableData.gyeonGiDoDoneStamp,
                 notStampRegion: ComparableData.gyeonGiDoNotDoneStamp
             )
-            self.region = "경기도"
+            self?.region = "경기도"
         }
-        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
-            self.annotationSetting(
-                didSpotList: self.gyeongNamSpotListDidStamp,
-                notDidSpotList: self.gyeongNamSpotListNotDidStamp,
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { [weak self] _ in
+            self?.annotationSetting(
+                didSpotList: self?.gyeongNamSpotListDidStamp,
+                notDidSpotList: self?.gyeongNamSpotListNotDidStamp,
                 stampRegion: ComparableData.gyeongNamDoneStamp,
                 notStampRegion: ComparableData.gyeongNamNotDoneStamp
             )
-            self.region = "경상남도"
+            self?.region = "경상남도"
         }
-        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
-            self.annotationSetting(
-                didSpotList: self.jejuSpotListDidStamp,
-                notDidSpotList: self.jejuSpotListNotDidStamp,
+        let jeju = UIAlertAction(title: "제주도", style: .default) { [weak self] _ in
+            self?.annotationSetting(
+                didSpotList: self?.jejuSpotListDidStamp,
+                notDidSpotList: self?.jejuSpotListNotDidStamp,
                 stampRegion: ComparableData.jejuDoneStamp,
                 notStampRegion: ComparableData.jejuNotDoneStamp
             )
-            self.region = "제주도"
+            self?.region = "제주도"
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         cancel.setValue(UIColor.red, forKey: "titleTextColor")

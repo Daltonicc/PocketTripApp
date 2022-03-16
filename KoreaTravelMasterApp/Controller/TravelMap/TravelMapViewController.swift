@@ -132,8 +132,8 @@ final class TravelMapViewController: UIViewController {
         detailImageView.isSkeletonable = true
         detailImageView.showAnimatedGradientSkeleton()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
         }
         
         collectButton.layer.cornerRadius = 10

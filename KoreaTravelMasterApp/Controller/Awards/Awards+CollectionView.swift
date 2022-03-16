@@ -21,7 +21,4 @@ extension AwardsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         return cell
     }
-    
-    
-    
 }

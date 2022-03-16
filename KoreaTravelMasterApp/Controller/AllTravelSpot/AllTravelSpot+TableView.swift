@@ -47,16 +47,16 @@ extension AllTravelSpotViewController: UITableViewDelegate, UITableViewDataSourc
         }
         //데이터베이스에 내용이 저장되어있으면 바로 보여주고 없으면 API통신 처리
         if spotData.overview == "" {
-            APIManager.shared.getSpotDetailData(contentId: spotData.contentId) { json in
+            APIManager.shared.getSpotDetailData(contentId: spotData.contentId) { [weak self] json in
                 let overview = APIManager.shared.overviewData
                 let image = APIManager.shared.imageData
                 
-                try! self.localRealm.write {
+                try! self?.localRealm.write {
                     spotData.setValue("\(overview)", forKey: "overview")
                     spotData.setValue("\(image)", forKey: "image")
                 }
                 vc.spotData = spotData
-                self.present(nav, animated: true, completion: nil)
+                self?.present(nav, animated: true, completion: nil)
             }
         } else {
             vc.spotData = spotData

@@ -14,7 +14,15 @@ final class TravelSpotDetailViewController: UIViewController {
     @IBOutlet var spotImageView: UIImageView!
     @IBOutlet var spotOverviewTextView: UITextView!
     
-    var spotData: MytravelSpotObject = MytravelSpotObject(title: "", date: Date(), overview: "", contentId: 0, image: "", stampStatus: false, areaCode: 0, latitude: 0, longitude: 0)
+    var spotData: MytravelSpotObject = MytravelSpotObject(title: "",
+                                                          date: Date(),
+                                                          overview: "",
+                                                          contentId: 0,
+                                                          image: "",
+                                                          stampStatus: false,
+                                                          areaCode: 0,
+                                                          latitude: 0,
+                                                          longitude: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +54,8 @@ final class TravelSpotDetailViewController: UIViewController {
         spotImageView.isSkeletonable = true
         spotImageView.showAnimatedSkeleton()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.spotImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.spotImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
         }
         
         spotOverviewTextView.backgroundColor = .white

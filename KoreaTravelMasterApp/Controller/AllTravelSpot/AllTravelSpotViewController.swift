@@ -70,25 +70,25 @@ final class AllTravelSpotViewController: UIViewController {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let seoul = UIAlertAction(title: "서울", style: .default) { _ in
-            self.areaCode = 1
-            self.allSpotTableView.reloadData()
+        let seoul = UIAlertAction(title: "서울", style: .default) { [weak self] _ in
+            self?.areaCode = 1
+            self?.allSpotTableView.reloadData()
         }
-        let busan = UIAlertAction(title: "부산", style: .default) { _ in
-            self.areaCode = 6
-            self.allSpotTableView.reloadData()
+        let busan = UIAlertAction(title: "부산", style: .default) { [weak self] _ in
+            self?.areaCode = 6
+            self?.allSpotTableView.reloadData()
         }
-        let gyeongGido = UIAlertAction(title: "경기도", style: .default) { _ in
-            self.areaCode = 31
-            self.allSpotTableView.reloadData()
+        let gyeongGido = UIAlertAction(title: "경기도", style: .default) { [weak self] _ in
+            self?.areaCode = 31
+            self?.allSpotTableView.reloadData()
         }
-        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
-            self.areaCode = 36
-            self.allSpotTableView.reloadData()
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { [weak self] _ in
+            self?.areaCode = 36
+            self?.allSpotTableView.reloadData()
         }
-        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
-            self.areaCode = 39
-            self.allSpotTableView.reloadData()
+        let jeju = UIAlertAction(title: "제주도", style: .default) { [weak self] _ in
+            self?.areaCode = 39
+            self?.allSpotTableView.reloadData()
         }
 
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)

@@ -123,15 +123,15 @@ extension TravelMapViewController: CLLocationManagerDelegate {
             contentId = travelSpotDictionary["\(selectAnnotation.title!)"] ?? 0
             // 디비에 데이터 없을 때 API 통신
             if selectedAnnotation.first?.overview == "" {
-                APIManager.shared.getSpotDetailData(contentId: contentId) { _ in
-                    self.mapStampView.isHidden = false
-                    self.annotationClicked(annotation: selectAnnotation)
-                    self.annotationSaveToDB()
-                    self.annotationDistanceCalculate(annotation: selectAnnotation)
-                    self.detailImageView.isSkeletonable = true
-                    self.detailImageView.showAnimatedSkeleton()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                        self.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
+                APIManager.shared.getSpotDetailData(contentId: contentId) { [weak self] _ in
+                    self?.mapStampView.isHidden = false
+                    self?.annotationClicked(annotation: selectAnnotation)
+                    self?.annotationSaveToDB()
+                    self?.annotationDistanceCalculate(annotation: selectAnnotation)
+                    self?.detailImageView.isSkeletonable = true
+                    self?.detailImageView.showAnimatedSkeleton()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+                        self?.detailImageView.hideSkeleton(reloadDataAfter: true, transition: .none)
                     })
                 }
             } else {

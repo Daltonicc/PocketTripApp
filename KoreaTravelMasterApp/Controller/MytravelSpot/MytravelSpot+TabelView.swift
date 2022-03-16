@@ -100,38 +100,38 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "") { action, view, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: "") { [weak self] action, view, completionHandler in
             let alert = UIAlertController(title: "정말 지우시겠습니까?", message: "해당 퍼즐은 지도에서 다시 획득할 수 있습니다", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
             cancel.setValue(UIColor.red, forKey: "titleTextColor")
             let ok = UIAlertAction(title: "확인", style: .default) { _ in
             
-                try! self.localRealm.write {
-                    if self.isFiltering {
-                        let filterRow = self.searchFilterSpotList[indexPath.row]
-                        filterRow.setValue(false, forKey: "stampStatus")
+                try! self?.localRealm.write {
+                    if ((self?.isFiltering) != nil) {
+                        let filterRow = self?.searchFilterSpotList[indexPath.row]
+                        filterRow?.setValue(false, forKey: "stampStatus")
                         tableView.reloadSections(IndexSet(0...0), with: .automatic)
                     } else {
                         switch indexPath.section {
                         case 0:
-                            let seoulRow = self.seoulSpotListDidStamp[indexPath.row]
-                            seoulRow.setValue(false, forKey: "stampStatus")
+                            let seoulRow = self?.seoulSpotListDidStamp[indexPath.row]
+                            seoulRow?.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(0...0), with: .automatic)
                         case 1:
-                            let busanRow = self.busanSpotListDidStamp[indexPath.row]
-                            busanRow.setValue(false, forKey: "stampStatus")
+                            let busanRow = self?.busanSpotListDidStamp[indexPath.row]
+                            busanRow?.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(1...1), with: .automatic)
                         case 2:
-                            let gyeongGiDoRow = self.gyeongGiDoSpotListDidStamp[indexPath.row]
-                            gyeongGiDoRow.setValue(false, forKey: "stampStatus")
+                            let gyeongGiDoRow = self?.gyeongGiDoSpotListDidStamp[indexPath.row]
+                            gyeongGiDoRow?.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(2...2), with: .automatic)
                         case 3:
-                            let gyeongNamRow = self.gyeongNamSpotListDidStamp[indexPath.row]
-                            gyeongNamRow.setValue(false, forKey: "stampStatus")
+                            let gyeongNamRow = self?.gyeongNamSpotListDidStamp[indexPath.row]
+                            gyeongNamRow?.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(3...3), with: .automatic)
                         case 4:
-                            let jejuRow = self.jejuSpotListDidStamp[indexPath.row]
-                            jejuRow.setValue(false, forKey: "stampStatus")
+                            let jejuRow = self?.jejuSpotListDidStamp[indexPath.row]
+                            jejuRow?.setValue(false, forKey: "stampStatus")
                             tableView.reloadSections(IndexSet(4...4), with: .automatic)
                         default: print("trailing Default")
                         }
@@ -141,7 +141,7 @@ extension MytravelSpotViewController: UITableViewDelegate, UITableViewDataSource
             alert.addAction(ok)
             alert.addAction(cancel)
             
-            self.present(alert, animated: true, completion: nil)
+            self?.present(alert, animated: true, completion: nil)
             completionHandler(true)
         }
         deleteAction.image = UIImage(systemName: "trash.fill")

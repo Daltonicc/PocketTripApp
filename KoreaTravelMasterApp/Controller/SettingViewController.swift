@@ -77,30 +77,30 @@ final class SettingViewController: UIViewController {
     @IBAction func myRegionSetting(_ sender: UIButton) {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let seoul = UIAlertAction(title: "서울", style: .default) { _ in
+        let seoul = UIAlertAction(title: "서울", style: .default) { [weak self] _ in
             MyRegion.myRegion = "서울"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
-            self.regionLabel.text = MyRegion.myRegion
+            self?.regionLabel.text = MyRegion.myRegion
         }
-        let busan = UIAlertAction(title: "부산", style: .default) { _ in
+        let busan = UIAlertAction(title: "부산", style: .default) { [weak self] _ in
             MyRegion.myRegion = "부산"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
-            self.regionLabel.text = MyRegion.myRegion
+            self?.regionLabel.text = MyRegion.myRegion
         }
-        let gyeongGiDo = UIAlertAction(title: "경기도", style: .default) { _ in
+        let gyeongGiDo = UIAlertAction(title: "경기도", style: .default) { [weak self] _ in
             MyRegion.myRegion = "경기도"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
-            self.regionLabel.text = MyRegion.myRegion
+            self?.regionLabel.text = MyRegion.myRegion
         }
-        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { _ in
+        let gyeongNam = UIAlertAction(title: "경상남도", style: .default) { [weak self] _ in
             MyRegion.myRegion = "경상남도"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
-            self.regionLabel.text = MyRegion.myRegion
+            self?.regionLabel.text = MyRegion.myRegion
         }
-        let jeju = UIAlertAction(title: "제주도", style: .default) { _ in
+        let jeju = UIAlertAction(title: "제주도", style: .default) { [weak self] _ in
             MyRegion.myRegion = "제주도"
             UserDefaults.standard.set(MyRegion.myRegion, forKey: "region")
-            self.regionLabel.text = MyRegion.myRegion
+            self?.regionLabel.text = MyRegion.myRegion
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         cancel.setValue(UIColor.red, forKey: "titleTextColor")
