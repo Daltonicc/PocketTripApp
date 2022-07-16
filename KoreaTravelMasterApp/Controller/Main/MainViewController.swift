@@ -17,7 +17,8 @@ import RealmSwift
 final class MainViewController: UIViewController {
 
     // MARK: - Property
-    
+    weak var coordinator: MainCoordinator?
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var sideMenuBarButton: UIBarButtonItem!
