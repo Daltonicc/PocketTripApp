@@ -55,9 +55,9 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionViewSetting()
+        configureCollectionView()
         firstRegionAlert()
-        LabelSetting()
+        configureLabel()
         //최초 DB저장
         saveSpotData()
         //여행지 딕셔너리
@@ -72,7 +72,7 @@ final class MainViewController: UIViewController {
     }
 
     // MARK: - Method
-    func LabelSetting() {
+    func configureLabel() {
         
         titleLabel.text = "한국"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
@@ -84,7 +84,7 @@ final class MainViewController: UIViewController {
         logoButton.isEnabled = false
     }
     
-    func collectionViewSetting() {
+    func configureCollectionView() {
         
         let nibName = UINib(nibName: MainCollectionViewCell.identifier, bundle: nil)
         imageCollectionView.delegate = self
@@ -114,7 +114,7 @@ final class MainViewController: UIViewController {
         //이후에 추가데이터들 들어오면 추가
     }
     
-    @IBAction func findPlaceButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func didTapFindPlaceButton(_ sender: UIBarButtonItem) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "TravelMapViewController") as! TravelMapViewController
@@ -126,7 +126,7 @@ final class MainViewController: UIViewController {
         self.present(nav, animated: true, completion: nil)
     }
     
-    @IBAction func myTravelButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func didTapMyTravelButton(_ sender: UIBarButtonItem) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MytravelSpotViewController") as! MytravelSpotViewController
@@ -138,7 +138,7 @@ final class MainViewController: UIViewController {
         self.present(nav, animated: true, completion: nil)
     }
     
-    @IBAction func settingButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func didTapSettingButton(_ sender: UIBarButtonItem) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
@@ -149,7 +149,7 @@ final class MainViewController: UIViewController {
         self.present(nav, animated: true, completion: nil)
     }
     
-    @IBAction func awardsButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func didTapAwardsButton(_ sender: UIBarButtonItem) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "AwardsViewController") as! AwardsViewController
