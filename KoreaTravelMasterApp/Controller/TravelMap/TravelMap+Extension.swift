@@ -88,8 +88,7 @@ extension TravelMapViewController {
     }
     
     @objc func backButtonAction() {
-
-        self.dismiss(animated: true, completion: nil)
+        coordinator?.pop()
     }
     
     @objc func filterAction() {

@@ -17,7 +17,8 @@ import SkeletonView
 final class TravelMapViewController: UIViewController {
 
     // MARK: - Property
-    
+    weak var coordinator: MainCoordinator?
+
     @IBOutlet weak var travelMapView: MKMapView!
     @IBOutlet weak var userLocationButton: UIButton!
     @IBOutlet weak var mapStampView: UIView!

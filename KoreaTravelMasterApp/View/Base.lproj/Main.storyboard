@@ -111,9 +111,6 @@
                             </barButtonItem>
                             <barButtonItem image="mapIcon" style="done" id="J3w-Ln-9hY">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="findPlaceButtonClicked:" destination="BYZ-38-t0r" id="mvL-EG-GoT"/>
-                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -126,6 +123,7 @@
                         <outlet property="percentLabel" destination="8gR-px-LOx" id="Saq-kG-cEb"/>
                         <outlet property="sideMenuBarButton" destination="uPO-mn-SqO" id="jus-6c-ixL"/>
                         <outlet property="titleLabel" destination="xkM-53-su3" id="puS-NM-oSb"/>
+                        <outlet property="travelMapBarButton" destination="J3w-Ln-9hY" id="nsA-YE-i71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

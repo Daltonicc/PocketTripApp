@@ -26,7 +26,8 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var logoButton: UIButton!
-    
+    @IBOutlet weak var travelMapBarButton: UIBarButtonItem!
+
     var mytravelSpotList: Results<MytravelSpotObject>! {
         localRealm.objects(MytravelSpotObject.self).filter("stampStatus == true")
     }
@@ -59,6 +60,7 @@ final class MainViewController: UIViewController {
         configureCollectionView()
         firstRegionAlert()
         configureLabel()
+        configureBarButtonItem()
         //최초 DB저장
         saveSpotData()
         //여행지 딕셔너리
@@ -96,6 +98,11 @@ final class MainViewController: UIViewController {
         
         cellLayout()
     }
+
+    func configureBarButtonItem() {
+        travelMapBarButton.target = self
+        travelMapBarButton.action = #selector(didTapTravleMapButton)
+    }
     
     func saveSpotData() {
         
@@ -114,17 +121,9 @@ final class MainViewController: UIViewController {
         updatingDictionary(spotData: jejuSpotData, areaCode: 39)
         //이후에 추가데이터들 들어오면 추가
     }
-    
-    @IBAction func didTapFindPlaceButton(_ sender: UIBarButtonItem) {
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "TravelMapViewController") as! TravelMapViewController
-        let nav = UINavigationController(rootViewController: vc)
-        
-        nav.modalTransitionStyle = .crossDissolve
-        nav.modalPresentationStyle = .fullScreen
-        
-        self.present(nav, animated: true, completion: nil)
+
+    @objc func didTapTravleMapButton() {
+        coordinator?.pushTravelMapView()
     }
     
     @IBAction func didTapMyTravelButton(_ sender: UIBarButtonItem) {
