@@ -13,6 +13,7 @@ final class MainCoordinator: Coordinator {
 
     var presenter: UINavigationController
     var childCoordinators: [Coordinator]
+    private let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -20,9 +21,22 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         viewController.coordinator = self
         presenter.pushViewController(viewController, animated: true)
+    }
+
+    func pushTravelMapView() {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "TravelMapViewController") as! TravelMapViewController
+        viewController.coordinator = self
+        presenter.pushViewController(viewController, animated: true)
+    }
+
+    func pop() {
+        presenter.popViewController(animated: true)
+    }
+
+    func dismiss() {
+        presenter.dismiss(animated: true)
     }
 }
